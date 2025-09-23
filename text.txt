@@ -1,6 +1,0 @@
-rasta-repair/
-│
-├── index.html
-├── styles.css
-└── assets/
-     └── (optional images or icons)
