@@ -1,52 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>J's Rasta Repair</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <section class="rasta-repair">
-    <div class="rasta-repair-header">
-      <h1>J's Rasta Repair</h1>
-      <p>Reliable Appliance Repair with a Rasta Vibe</p>
-    </div>
-
-    <nav class="rasta-repair-nav">
-      <a href="#rasta-services">Services</a>
-      <a href="#rasta-contact">Contact</a>
-    </nav>
-
-    <div class="rasta-repair-hero">
-      <h2>LET’S FIX YOUR ISSUE TODAY!</h2>
-    </div>
-
-    <div class="rasta-repair-section" id="rasta-services">
-      <div class="rasta-repair-box">
-        <h3>Our Services</h3>
-        <ul>
-          <li>🔧 Washer & Dryer Repair</li>
-          <li>🧊 Refrigerator & Freezer Service</li>
-          <li>🔥 Oven & Stove Fixes</li>
-          <li>📺 Microwave & Small Appliance Repairs</li>
-          <li>🏠 In-Home Diagnostics</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="rasta-repair-section" id="rasta-contact">
-      <div class="rasta-repair-box">
-        <h3>Contact Us</h3>
-        <p><strong>📞 Phone:</strong> (248) 248-3361</p>
-        <p><strong>📧 Email:</strong> jsrastarepair@gmail.com</p>
-        <p><strong>⏰ Hours:</strong> Mon - Sat | 9am - 6pm EST</p>
-      </div>
-    </div>
-
-    <div class="rasta-repair-footer">
-      &copy; 2025 J's Rasta Repair. All rights reserved.
-    </div>
-  </section>
-</body>
-</html>
+rasta-repair/
+│
+├── index.html
+├── styles.css
+└── assets/
+     └── (optional images or icons)
