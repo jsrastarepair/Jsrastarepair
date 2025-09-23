@@ -1,100 +1,52 @@
-.rasta-repair {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #fff;
-  background: linear-gradient(to bottom, #1a1a1a, #333);
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>J's Rasta Repair</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <section class="rasta-repair">
+    <div class="rasta-repair-header">
+      <h1>J's Rasta Repair</h1>
+      <p>Reliable Appliance Repair with a Rasta Vibe</p>
+    </div>
 
-.rasta-repair-header {
-  background: linear-gradient(90deg, #ff0000, #ffff00, #00cc00);
-  text-align: center;
-  padding: 1.5rem 1rem;
-  color: Black;
-}
+    <nav class="rasta-repair-nav">
+      <a href="#rasta-services">Services</a>
+      <a href="#rasta-contact">Contact</a>
+    </nav>
 
-.rasta-repair-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
-}
+    <div class="rasta-repair-hero">
+      <h2>LET’S FIX YOUR ISSUE TODAY!</h2>
+    </div>
 
-.rasta-repair-nav {
-  background: #222;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 0.75rem;
-}
+    <div class="rasta-repair-section" id="rasta-services">
+      <div class="rasta-repair-box">
+        <h3>Our Services</h3>
+        <ul>
+          <li>🔧 Washer & Dryer Repair</li>
+          <li>🧊 Refrigerator & Freezer Service</li>
+          <li>🔥 Oven & Stove Fixes</li>
+          <li>📺 Microwave & Small Appliance Repairs</li>
+          <li>🏠 In-Home Diagnostics</li>
+        </ul>
+      </div>
+    </div>
 
-.rasta-repair-nav a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0.5rem 1.2rem;
-  font-weight: bold;
-}
+    <div class="rasta-repair-section" id="rasta-contact">
+      <div class="rasta-repair-box">
+        <h3>Contact Us</h3>
+        <p><strong>📞 Phone:</strong> (248) 248-3361</p>
+        <p><strong>📧 Email:</strong> jsrastarepair@gmail.com</p>
+        <p><strong>⏰ Hours:</strong> Mon - Sat | 9am - 6pm EST</p>
+      </div>
+    </div>
 
-.rasta-repair-nav a:hover {
-  color: #00cc00;
-}
-
-.rasta-repair-hero {
-  text-align: center;
-  padding: 3rem 1rem;
-  background: url('https://images.unsplash.com/photo-1581090463770-52641eae0b43?fit=crop&w=1600&q=80') no-repeat center;
-  background-size: cover;
-  color: white;
-}
-
-.rasta-repair-hero h2 {
-  font-size: 2.2rem;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 0.75rem 1.5rem;
-  border-radius: 10px;
-}
-
-.rasta-repair-section {
-  padding: 2rem 1rem;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.rasta-repair-box {
-  background: #444;
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.rasta-repair-box h3 {
-  color: #ffff00;
-  margin-bottom: 1rem;
-}
-
-.rasta-repair ul {
-  list-style: none;
-  padding: 0;
-}
-
-.rasta-repair li {
-  margin: 0.5rem 0;
-  font-size: 1.1rem;
-}
-
-.rasta-repair-footer {
-  background: #111;
-  text-align: center;
-  padding: 1rem;
-  color: #ccc;
-}
-
-@media (max-width: 600px) {
-  .rasta-repair-header h1 {
-    font-size: 2rem;
-  }
-
-  .rasta-repair-hero h2 {
-    font-size: 1.5rem;
-  }
-
-  .rasta-repair-section {
-    padding: 1rem;
-  }
-}
+    <div class="rasta-repair-footer">
+      &copy; 2025 J's Rasta Repair. All rights reserved.
+    </div>
+  </section>
+</body>
+</html>
