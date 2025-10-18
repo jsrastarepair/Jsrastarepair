@@ -7,11 +7,11 @@
   <title>J’s Rasta Repair | South Florida Appliance Experts</title>
 
   <style>
-    /* -------- GLOBAL STYLE -------- */
+    /* GLOBAL STYLE */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      background-color: #f9f9f9;
+      background-color: #f8f8f8;
       color: #222;
       line-height: 1.6;
     }
@@ -23,36 +23,27 @@
       padding: 40px 20px;
     }
 
-    header img {
-      width: 130px;
-      height: auto;
-      border-radius: 50%;
-    }
-
     header h1 {
       font-size: 2.4em;
-      margin: 10px 0;
+      margin-bottom: 10px;
     }
 
     header p {
       font-size: 1.1em;
-      margin: 5px 0 15px;
+      margin: 0;
     }
 
     nav {
       background-color: #111;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 10px 0;
+      text-align: center;
+      padding: 10px;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin: 10px 20px;
-      font-weight: 600;
-      font-size: 0.95em;
+      margin: 0 15px;
+      font-weight: bold;
     }
 
     nav a:hover {
@@ -61,7 +52,7 @@
 
     section {
       padding: 60px 20px;
-      max-width: 1100px;
+      max-width: 1000px;
       margin: auto;
     }
 
@@ -69,9 +60,27 @@
       color: #006400;
       text-align: center;
       margin-bottom: 30px;
-      border-bottom: 3px solid #ffd700;
+      border-bottom: 2px solid #ffd700;
       display: inline-block;
       padding-bottom: 5px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .service-box {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .service-box h3 {
+      color: #d40000;
     }
 
     .cta-btn {
@@ -89,56 +98,24 @@
       background-color: #228b22;
     }
 
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-    }
-
-    .service-box {
-      background: white;
+    .why, .about, .contact {
+      background-color: white;
       border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background-color: #111;
+      color: #fff;
       text-align: center;
-      transition: transform 0.3s;
+      padding: 20px;
+      margin-top: 40px;
     }
 
-    .service-box:hover {
-      transform: translateY(-5px);
-    }
-
-    .service-box img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-
-    .service-box h3 {
-      color: #d40000;
-      margin: 15px 0 5px;
-    }
-
-    .service-box p {
-      padding: 0 15px 20px;
-    }
-
-    .why ul {
-      list-style: none;
-      padding: 0;
-      line-height: 2;
-    }
-
-    .why li {
-      padding-left: 25px;
-      position: relative;
-    }
-
-    .why li::before {
-      content: "✔";
-      color: #006400;
-      position: absolute;
-      left: 0;
+    footer a {
+      color: #ffd700;
+      text-decoration: none;
     }
 
     form input, form textarea, form select {
@@ -157,39 +134,20 @@
       border-radius: 5px;
       font-size: 1em;
       cursor: pointer;
-      width: 100%;
     }
 
     form button:hover {
       background-color: #b30000;
     }
 
-    footer {
-      background-color: #111;
-      color: #fff;
-      text-align: center;
-      padding: 25px 15px;
-    }
-
-    footer a {
-      color: #ffd700;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      color: #fff;
-    }
-
-    @media (max-width: 768px) {
+    @media (max-width: 600px) {
       header h1 { font-size: 1.8em; }
-      nav a { margin: 8px 10px; }
     }
   </style>
 </head>
 
 <body>
   <header>
-    <img src="IMG_1023.png" alt="J’s Rasta Repair Logo">
     <h1>J’s Rasta Repair</h1>
     <p>Reliable Appliance Repair in South Florida</p>
     <p><strong>Fast • Professional • All Major Brands</strong></p>
@@ -203,38 +161,33 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <section id="about">
+  <section id="about" class="about">
     <h2>About Us</h2>
-    <p>At <strong>J’s Rasta Repair</strong>, we provide expert appliance repair services across South Florida — including Fort Lauderdale, Pompano, Hollywood, Davie, Plantation, Sunrise, Coral Springs, and Miramar. We service all major appliance brands and ensure every repair is handled with professionalism, reliability, and care. Our mission is to restore your appliances quickly and efficiently while delivering excellent customer service.</p>
+    <p>At <strong>J’s Rasta Repair</strong>, we provide expert appliance repair services across South Florida — including Fort Lauderdale, Pompano, Hollywood, Davie, Plantation, Sunrise, Coral Springs, and Miramar. We service all major appliance brands and ensure every repair is handled with professionalism, reliability, and care.</p>
   </section>
 
   <section id="services">
     <h2>Our Services</h2>
     <div class="services">
       <div class="service-box">
-        <img src="https://images.unsplash.com/photo-1616627984782-9b8a9bfc0672?auto=format&fit=crop&w=800&q=60" alt="Washer and Dryer">
-        <h3>Washer & Dryer Repair</h3>
+        <h3>🧺 Washer & Dryer Repair</h3>
         <p>Fast and affordable service for all makes and models.</p>
       </div>
       <div class="service-box">
-        <img src="https://images.unsplash.com/photo-1616628142497-6a673b64b179?auto=format&fit=crop&w=800&q=60" alt="Refrigerator Repair">
-        <h3>Refrigerator & Freezer</h3>
+        <h3>🧊 Refrigerator & Freezer</h3>
         <p>Keep your food cold with expert refrigerator repair.</p>
       </div>
       <div class="service-box">
-        <img src="https://images.unsplash.com/photo-1556912173-3b9c8b6f5d05?auto=format&fit=crop&w=800&q=60" alt="Oven Repair">
-        <h3>Oven & Stove Repair</h3>
+        <h3>🔥 Oven & Stove Repair</h3>
         <p>Reliable fixes for gas and electric ranges.</p>
       </div>
       <div class="service-box">
-        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=60" alt="Dishwasher Repair">
-        <h3>Dishwasher Repair</h3>
-        <p>Quick, efficient service to restore your dishwasher’s performance.</p>
+        <h3>❄️ Ice Machine & Water Filter</h3>
+        <p>Quality filtration and ice machine maintenance.</p>
       </div>
       <div class="service-box">
-        <img src="https://images.unsplash.com/photo-1586201375754-9903d0f763b3?auto=format&fit=crop&w=800&q=60" alt="Ice Machine Repair">
-        <h3>Ice Machine & Water Filter</h3>
-        <p>Quality filtration and ice machine maintenance.</p>
+        <h3>🧽 Dishwasher Repair</h3>
+        <p>Quick, efficient service to restore your dishwasher’s performance.</p>
       </div>
     </div>
   </section>
@@ -242,15 +195,15 @@
   <section id="why" class="why">
     <h2>Why Choose Us</h2>
     <ul>
-      <li>Certified & insured technicians</li>
-      <li>Same-day and emergency service</li>
-      <li>Honest, upfront pricing</li>
-      <li>Guaranteed repairs with genuine parts</li>
-      <li>Serving all major appliance brands</li>
+      <li>✅ Certified & insured technicians</li>
+      <li>✅ Same-day and emergency service</li>
+      <li>✅ Honest, upfront pricing</li>
+      <li>✅ Guaranteed repairs with genuine parts</li>
+      <li>✅ Serving all major appliance brands</li>
     </ul>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="contact">
     <h2>Contact Us</h2>
     <p>We’re here to help! Contact us for fast, professional appliance repair service.</p>
 
@@ -278,11 +231,10 @@
 
   <footer>
     <p>© 2025 J’s Rasta Repair | Licensed & Insured | All Rights Reserved</p>
-    <p>
-      Follow us on 
-      <a href="https://instagram.com/jsrastarepair" target="_blank">Instagram</a> |
-      <a href="#" target="_blank">Facebook</a> |
-      <a href="#" target="_blank">Google Business</a>
+    <p>Follow us on 
+      <a href="#">Instagram</a> | 
+      <a href="#">Facebook</a> | 
+      <a href="#">Google Business</a>
     </p>
   </footer>
 </body>
