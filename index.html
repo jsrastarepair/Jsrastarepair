@@ -1,255 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
-  
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Professional Appliance Repair Services in South Florida | J’s Rasta Repair" />
-  <title>J’s Rasta Repair | South Florida Appliance Experts</title>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Professional Appliance Repair Services in South Florida | J’s Rasta Repair">
+<title>J’s Rasta Repair | South Florida Appliance Experts</title>
 
-  <style>
-    /* GLOBAL STYLE */
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background-color: #f8f8f8;
-      color: #222;
-      line-height: 1.6;
-    }
+<meta name="google-site-verification" content="Or5_Vx9kwk54B0SasOJ10wuZbywHgE45uYVV_YpuVj0">
 
-    header {
-      background: linear-gradient(to right, #006400, #ffd700, #d40000);
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
-    }
+<style>
+:root {
+  --green:#006400;
+  --gold:#ffd700;
+  --red:#d40000;
+  --dark:#111;
+  --light:#f8f8f8;
+}
 
-    header h1 {
-      font-size: 2.4em;
-      margin-bottom: 10px;
-    }
+* { box-sizing: border-box; }
 
-    header p {
-      font-size: 1.1em;
-      margin: 0;
-    }
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--light);
+  color: #222;
+  line-height: 1.6;
+}
 
-    nav {
-      background-color: #111;
-      text-align: center;
-      padding: 10px;
-    }
+/* HEADER */
+header {
+  background: linear-gradient(to right, var(--green), var(--gold), var(--red));
+  color: #fff;
+  text-align: center;
+  padding: 3rem 1rem;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
+header h1 { margin: 0 0 .5rem; }
+header p { margin: .2rem 0; }
 
-    nav a:hover {
-      color: #ffd700;
-    }
+/* NAV */
+nav {
+  background: var(--dark);
+  text-align: center;
+  padding: .7rem;
+}
 
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
+nav a {
+  color: #fff;
+  margin: 0 .8rem;
+  text-decoration: none;
+  font-weight: 600;
+}
 
-    h2 {
-      color: #006400;
-      text-align: center;
-      margin-bottom: 30px;
-      border-bottom: 2px solid #ffd700;
-      display: inline-block;
-      padding-bottom: 5px;
-    }
+nav a:hover { color: var(--gold); }
 
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
+/* SECTIONS */
+main section {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 2rem 1rem;
+}
 
-    .service-box {
-      background: white;
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      text-align: center;
-    }
+h2 {
+  text-align: center;
+  color: var(--green);
+  border-bottom: 2px solid var(--gold);
+  display: inline-block;
+  margin-bottom: 2rem;
+}
 
-    .service-box h3 {
-      color: #d40000;
-    }
+/* CARDS */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.1);
+}
 
-    .cta-btn {
-      display: inline-block;
-      background-color: #006400;
-      color: white;
-      padding: 12px 25px;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 1.2rem;
+}
 
-    .cta-btn:hover {
-      background-color: #228b22;
-    }
+.service h3 { color: var(--red); }
 
-    .why, .about, .contact {
-      background-color: white;
-      border-radius: 8px;
-      padding: 30px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--green);
+  color: #fff;
+  padding: .7rem 1.4rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+}
 
-    footer {
-      background-color: #111;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
+.btn:hover { background: #228b22; }
 
-    footer a {
-      color: #ffd700;
-      text-decoration: none;
-    }
+/* FORM */
+form input, form textarea, form select {
+  width: 100%;
+  padding: .6rem;
+  margin-bottom: .7rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
 
-    form input, form textarea, form select {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
+form button {
+  width: 100%;
+  padding: .7rem;
+  background: var(--red);
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
-    form button {
-      background-color: #d40000;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 5px;
-      font-size: 1em;
-      cursor: pointer;
-    }
+form button:hover { background: #b30000; }
 
-    form button:hover {
-      background-color: #b30000;
-    }
+/* FOOTER */
+footer {
+  background: var(--dark);
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
 
-    @media (max-width: 600px) {
-      header h1 { font-size: 1.8em; }
-    }
-  </style>
+footer a {
+  color: var(--gold);
+  text-decoration: none;
+}
 
-<meta name="google-site-verification" content="Or5_Vx9kwk54B0SasOJ10wuZbywHgE45uYVV_YpuVj0" />
-  
+/* MOBILE */
+@media (max-width:600px){
+  header h1 { font-size: 1.8rem; }
+}
+</style>
 </head>
 
 <body>
-  <header>
-    <h1>J’s Rasta Repair</h1>
-    <p>Reliable Appliance Repair in South Florida</p>
-    <p><strong>Fast • Professional • All Major Brands</strong></p>
-    <a href="#contact" class="cta-btn">Book a Service</a>
-  </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#why">Why Choose Us</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<header>
+  <h1>J’s Rasta Repair</h1>
+  <p>Reliable Appliance Repair in South Florida</p>
+  <strong>Fast • Professional • All Major Brands</strong><br>
+  <a href="#contact" class="btn">Book a Service</a>
+</header>
 
-  <section id="about" class="about">
-    <h2>About Us</h2>
-    <p>At <strong>J’s Rasta Repair</strong>, we provide expert appliance repair services across South Florida — including Fort Lauderdale, Pompano, Hollywood, Davie, Plantation, Sunrise, Coral Springs, and Miramar. We service all major appliance brands and ensure every repair is handled with professionalism, reliability, and care.</p>
-  </section>
+<nav>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#why">Why Us</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-  <section id="services">
-    <h2>Our Services</h2>
-    <div class="services">
-      <div class="service-box">
-        <h3>🧺 Washer & Dryer Repair</h3>
-        <p>Fast and affordable service for all makes and models.</p>
-      </div>
-      <div class="service-box">
-        <h3>🧊 Refrigerator & Freezer</h3>
-        <p>Keep your food cold with expert refrigerator repair.</p>
-      </div>
-      <div class="service-box">
-        <h3>🔥 Oven & Stove Repair</h3>
-        <p>Reliable fixes for gas and electric ranges.</p>
-      </div>
-      <div class="service-box">
-        <h3>❄️ Ice Machine & Water Filter</h3>
-        <p>Quality filtration and ice machine maintenance.</p>
-      </div>
-      <div class="service-box">
-        <h3>🧽 Dishwasher Repair</h3>
-        <p>Quick, efficient service to restore your dishwasher’s performance.</p>
-      </div>
-    </div>
-  </section>
+<main>
 
-  <section id="why" class="why">
-    <h2>Why Choose Us</h2>
-    <ul>
-      <li>✅ Certified & insured technicians</li>
-      <li>✅ Same-day and emergency service</li>
-      <li>✅ Honest, upfront pricing</li>
-      <li>✅ Repairs with genuine parts</li>
-      <li>✅ Serving all major appliance brands</li>
-    </ul>
-  </section>
+<section id="about" class="card">
+  <h2>About Us</h2>
+  <p>
+    <strong>J’s Rasta Repair</strong> provides expert appliance repair across South Florida including
+    Fort Lauderdale, Pompano, Hollywood, Davie, Plantation, Sunrise, Coral Springs, and Miramar.
+  </p>
+</section>
 
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p>We’re here to help! Contact us for fast, professional appliance repair service.</p>
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="card service"><h3>🧺 Washer & Dryer</h3><p>Fast, affordable repairs.</p></div>
+    <div class="card service"><h3>🧊 Refrigerator</h3><p>Cooling issues fixed right.</p></div>
+    <div class="card service"><h3>🔥 Oven & Stove</h3><p>Gas & electric ranges.</p></div>
+    <div class="card service"><h3>❄️ Ice Machines</h3><p>Maintenance & filtration.</p></div>
+    <div class="card service"><h3>🧽 Dishwasher</h3><p>Efficient, reliable service.</p></div>
+  </div>
+</section>
 
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="tel" placeholder="Phone Number" required>
-      <input type="email" placeholder="Email Address">
-      <select required>
-        <option value="">Select Appliance Type</option>
-        <option>Refrigerator</option>
-        <option>Washer</option>
-        <option>Dryer</option>
-        <option>Oven / Stove</option>
-        <option>Dishwasher</option>
-        <option>Ice Machine</option>
-      </select>
-      <textarea rows="4" placeholder="Describe the issue..."></textarea>
-      <button type="submit">Submit Request</button>
-    </form>
+<section id="why" class="card">
+  <h2>Why Choose Us</h2>
+  <ul>
+    <li>✅ Certified & insured</li>
+    <li>✅ Same-day service</li>
+    <li>✅ Honest pricing</li>
+    <li>✅ Genuine parts</li>
+  </ul>
+</section>
 
-    <p><strong>📞 Phone:</strong> (248) 248-3361</p>
-    <p><strong>📧 Email:</strong> jsrastarepair@gmail.com</p>
-    <p><strong>📍 Service Area:</strong> Fort Lauderdale • Pompano • Hollywood • Davie • Plantation • Sunrise • Coral Springs • Miramar</p>
-  </section>
+<section id="contact" class="card">
+  <h2>Contact Us</h2>
+  <form>
+    <input type="text" placeholder="Name" required>
+    <input type="tel" placeholder="Phone" required>
+    <input type="email" placeholder="Email">
+    <select required>
+      <option value="">Appliance Type</option>
+      <option>Refrigerator</option>
+      <option>Washer</option>
+      <option>Dryer</option>
+      <option>Oven / Stove</option>
+      <option>Dishwasher</option>
+      <option>Ice Machine</option>
+    </select>
+    <textarea rows="4" placeholder="Describe the issue"></textarea>
+    <button>Submit Request</button>
+  </form>
 
-  <footer>
-    <p>© 2025 J’s Rasta Repair | Licensed & Insured | All Rights Reserved</p>
-    <p>Follow us on 
-      <a href="#">Instagram</a> | 
-      <a href="#">Facebook</a> | 
-      <a href="#">Google Business</a>
-    </p>
-  </footer>
+  <p><strong>📞</strong> (248) 248-3361<br>
+     <strong>📧</strong> jsrastarepair@gmail.com</p>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2025 J’s Rasta Repair | Licensed & Insured</p>
+  <p>
+    <a href="#">Instagram</a> |
+    <a href="#">Facebook</a> |
+    <a href="#">Google Business</a>
+  </p>
+</footer>
+
 </body>
-
-
-  
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-</html>
-
-  
 </html>
