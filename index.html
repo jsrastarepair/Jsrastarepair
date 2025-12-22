@@ -1,260 +1,543 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>J's Rasta Repair & HighOffGaming</title>
+  <title>J's Rasta Repair</title>
   <style>
-    :root {
-      --rasta-red: #ff0000;
-      --rasta-gold: #ffff00;
-      --rasta-green: #00cc00;
-      --gaming-cyan: #00ffff;
-      --bg-dark: #121212;
-      --card-bg: #1e1e1e;
-    }
-
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg-dark);
-      color: white;
-      scroll-behavior: smooth;
+      font-family: Arial, sans-serif;
+      color: cyan;
     }
 
-    /* --- GAMING SECTION (Linktree Style) --- */
     .hog-section {
-      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
         url('https://cdn.glitch.me/a1ec2450-5344-4fe9-9edc-48a204589aa4%2Flights%20off%20background.gif?v=1638567835781')
-        no-repeat center center;
+        no-repeat center center fixed;
       background-size: cover;
-      padding: 4rem 1rem;
-      text-align: center;
-      border-bottom: 5px solid var(--gaming-cyan);
-    }
-
-    .hog-section h1 { color: var(--gaming-cyan); font-size: 3rem; margin: 0; text-shadow: 0 0 10px var(--gaming-cyan); }
-    
-    .hog-social-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 2rem;
-      max-width: 1000px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .hog-social-grid img {
-      width: 120px;
-      height: 120px;
-      object-fit: cover;
-      border: 4px solid var(--gaming-cyan);
-      border-radius: 15px;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .hog-social-grid img:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 20px var(--gaming-cyan);
-    }
-
-    /* --- RASTA REPAIR SECTION --- */
-    .rasta-repair-header {
-      background: linear-gradient(90deg, var(--rasta-red), var(--rasta-gold), var(--rasta-green));
-      text-align: center;
       padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .hog-section a img {
+      width: 200px;
+      height: 200px;
+      border: 10px solid cyan;
+      margin: 10px;
+    }
+
+    a[href^="tel"] {
+      display: block;
+      margin: 2rem auto;
+      font-size: 1.5rem;
+      color: #00ffff;
+      text-decoration: underline;
+    }
+
+    .rasta-repair {
+      background: linear-gradient(to bottom, #1a1a1a, #333);
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .rasta-repair-header {
+      background: linear-gradient(90deg, #ff0000, #ffff00, #00cc00);
+      text-align: center;
+      padding: 1.5rem 1rem;
       color: black;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .rasta-repair-header h1 {
+      margin: 0;
+      font-size: 2.5rem;
     }
 
     .rasta-repair-nav {
       background: #222;
       display: flex;
       justify-content: center;
-      padding: 1rem;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      flex-wrap: wrap;
+      padding: 0.75rem;
     }
 
     .rasta-repair-nav a {
-      color: white;
+      color: #fff;
       text-decoration: none;
-      margin: 0 15px;
+      margin: 0.5rem 1.2rem;
       font-weight: bold;
-      text-transform: uppercase;
+      transition: color 0.3s;
     }
 
-    .rasta-repair-nav a:hover { color: var(--rasta-green); }
+    .rasta-repair-nav a:hover {
+      color: #00cc00;
+    }
 
     .rasta-repair-hero {
       text-align: center;
-      padding: 5rem 1rem;
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1581090463770-52641eae0b43?fit=crop&w=1600&q=80');
+      padding: 3rem 1rem;
+      background: url('https://images.unsplash.com/photo-1581090463770-52641eae0b43?fit=crop&w=1600&q=80') no-repeat center;
       background-size: cover;
-    }
-
-    .rasta-repair-box {
-      background: var(--card-bg);
-      border-radius: 15px;
-      padding: 2rem;
-      margin: 2rem auto;
-      max-width: 900px;
-      border-left: 5px solid var(--rasta-gold);
-    }
-
-    /* --- APPLIANCE GRID --- */
-    .appliance-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 20px;
-      margin-top: 2rem;
-    }
-
-    .appliance-item {
-      background: #2a2a2a;
-      padding: 10px;
-      border-radius: 10px;
-      text-align: center;
-      transition: 0.3s;
-    }
-
-    .appliance-item:hover { background: #333; transform: translateY(-5px); }
-
-    .appliance-item img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 10px;
-    }
-
-    /* --- FORM STYLING --- */
-    #applianceBookingForm {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      max-width: 500px;
-      margin: 0 auto;
-    }
-
-    input, select, textarea {
-      padding: 12px;
-      border-radius: 8px;
-      border: 1px solid #444;
-      background: #2a2f40;
       color: white;
     }
 
-    button {
-      background: var(--rasta-green);
-      color: black;
-      font-weight: bold;
-      padding: 15px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 1.1rem;
+    .rasta-repair-hero h2 {
+      font-size: 2.2rem;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border-radius: 10px;
     }
 
-    button:hover { background: var(--rasta-gold); }
-
-    .brand-logos img {
-      height: 50px;
-      margin: 10px;
-      filter: grayscale(100%) brightness(200%);
+    .rasta-repair-section {
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: auto;
     }
 
-    footer { text-align: center; padding: 2rem; background: #111; color: #777; }
+    .rasta-repair-box {
+      background: #444;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-top: 1.5rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .rasta-repair-box h3 {
+      color: #ffff00;
+      margin-bottom: 1rem;
+    }
+
+    .rasta-repair-logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1rem 0;
+    }
+
+    .rasta-repair-logos img {
+      max-width: 100px;
+      height: auto;
+      transition: transform 0.3s ease, filter 0.3s ease;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+    }
+
+    .rasta-repair-logos img:hover {
+      transform: scale(1.1);
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.7));
+    }
+
+    .rasta-repair-footer {
+      background: #111;
+      text-align: center;
+      padding: 1rem;
+      color: #ccc;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      .rasta-repair-header h1 {
+        font-size: 2rem;
+      }
+      .rasta-repair-hero h2 {
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+      }
+      .rasta-repair-section {
+        padding: 1rem;
+      }
+    }
   </style>
+
+<meta name="google-site-verification" content="Or5_Vx9kwk54B0SasOJ10wuZbywHgE45uYVV_YpuVj0" />  
 </head>
-<body>
+<!-- J's Rasta Repair Section -->
+  <section class="rasta-repair">
+    <div class="rasta-repair-header">
+      <h1>J's Rasta Repair</h1>
+      <p>Reliable Appliance Repair in South Florida ☀️ </p>
+    </div>
 
-  <section class="hog-section">
-    <h1>HighOffGaming</h1>
-    <h4>What Brings You Here?</h4>
-    <div class="hog-social-grid">
-      <a href="https://highoffkawaii.store/" target="_blank"><img src="https://cdn.glitch.com/a1ec2450-5344-4fe9-9edc-48a204589aa4%2Ftrim.53A9E90C-35EB-4D32-861C-330CA7F0744B.gif?v=1590467827880"></a>
-      <a href="https://soundcloud.com/fat2incher" target="_blank"><img src="https://cdn.glitch.com/a1ec2450-5344-4fe9-9edc-48a204589aa4%2Ftrim.82364451-9E70-41B2-9798-E1EA91D904DC.gif?v=1590467809684"></a>
-      <a href="https://twitch.com/highoffgaming" target="_blank"><img src="https://cdn.glitch.com/a1ec2450-5344-4fe9-9edc-48a204589aa4%2FHOG%20Logo%20Gif.gif?v=1590447647580"></a>
-      <a href="https://www.youtube.com/@highoffgaming." target="_blank"><img src="https://cdn.glitch.global/a1ec2450-5344-4fe9-9edc-48a204589aa4/YouTube%20subscribe%20button.png?v=1669761929654"></a>
-      <a href="https://instagram.com/highoffgaming/" target="_blank"><img src="https://cdn.glitch.global/a1ec2450-5344-4fe9-9edc-48a204589aa4/instagram.jpg?v=1668737671406"></a>
-      <a href="https://discord.gg/46BhsQeUez" target="_blank"><img src="https://cdn.glitch.me/a1ec2450-5344-4fe9-9edc-48a204589aa4%2Fdiscord.jpg?v=1638566640458"></a>
+    <nav class="rasta-repair-nav">
+      <a href="#rasta-services">Services</a>
+      <a href="#rasta-contact">Contact</a>
+      <a href="#rasta-booking">Booking</a>
+    </nav>
+
+    <div class="rasta-repair-hero">
+      <h2>HERE TO HELP THE PEOPLE REPAIR RATHER THAN REPLACE!</h2>
+    </div>
+
+    <div class="rasta-repair-section" id="rasta-services">
+      <div class="rasta-repair-box">
+        <h3>Our Services</h3>
+        <ul>
+          <li>🔧 Washer & Dryer Repairs</li>
+          <li>🧊 Refrigerator & IceMaker Repairs</li>
+          <li>🔥 Oven & Stove Repairs</li>
+          <li>📺 Microwave & Small Appliance Repairs</li>
+          <li>🏠 In-Home Diagnostics</li>
+          <li>🧹 Dryer or Vent Cleanings</li>
+          <li>💨 HVAC Ac & Cooling Repairs</li>
+          <li>📷 Security System Installations & Repairs</li>
+        </ul>
+      </div>
+      <div class="rasta-repair-box">
+        <h3>Brands We Service</h3>
+        <div class="rasta-repair-logos">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/General_Electric_logo.svg">
+  <img src="https://static.wikia.nocookie.net/logopedia/images/7/7e/LG_logo_2023.svg" alt="LG">
+  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Bosch-Logo.svg" alt="Bosch">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Electrolux_2015.svg">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg" alt="Samsung">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3wY9whgAodqCfcqel6Ju4LgCjtdENzhTB9Q&s" alt="Whirlpool">
+  <img src="https://vectorlogoseek.com/wp-content/uploads/2018/11/amana-vector-logo.png" alt="Amana">
+       
+          
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="rasta-repair-section" id="rasta-booking">
+      <div class="rasta-repair-box">    
+    
+    <!-- 📅 Booking Form -->
+<section id="applianceBookingSection">
+  <h2>Book A Repair</h2>
+  <form action="https://formspree.io/f/xldnkllv" method="POST" id="applianceBookingForm">
+    <input type="hidden" name="_subject" value="New Appliance Repair Booking">
+
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="tel" name="phone" placeholder="Phone Number (10 digits)" pattern="[0-9]{10}" required />
+    <input type="text" name="zip" placeholder="Zip Code (5 digits)" pattern="\d{5}" required />
+    <input type="email" name="email" placeholder="Email (optional)" />
+
+    <select name="appliance" id="appliance" required>
+      <option value="" disabled selected>Select Appliance Type</option>
+      <option value="washer">Washer</option>
+      <option value="dryer">Dryer</option>
+      <option value="refrigerator">Refrigerator</option>
+      <option value="oven">Oven / Stove</option>
+      <option value="dishwasher">Dishwasher</option>
+      <option value="microwave">Microwave</option>
+      <option value="icemaker">Ice Maker</option>
+    </select>
+
+    <select name="service" id="serviceSelect" required disabled>
+      <option value="">Select Common Issue</option>
+    </select>
+
+    <textarea name="problem" placeholder="Additional details (optional)" rows="4"></textarea>
+
+    <!-- 🔔 Enhanced Date & Time Section -->
+    <fieldset id="bookingTimeFieldset">
+      <legend>📅 Preferred Appointment</legend>
+      <label for="bookingDate">Choose a date:</label>
+      <input type="date" name="date" id="bookingDate" required />
+
+      <label for="bookingTime">Choose a time:</label>
+      <input type="time" name="time" id="bookingTime" required />
+      
+    </fieldset>
+
+    
+    
+    <button type="submit">Book Now</button>
+  </form>
+  
+  
+
+  <div id="bookingConfirmationMsg">✅ Thank you! Your booking has been submitted.</div>
+</section>
+
+<!-- 💅 Styling -->
+<style>
+  :root {
+    --bg-dark: #1c1f2b;
+    --accent: #3f8cff;
+    --text-light: #f5faff;
+    --text-muted: #aaa;
+    --input-bg: #2a2f40;
+    --border-radius: 10px;
+  }
+
+  #applianceBookingSection {
+    background: var(--bg-dark);
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  #applianceBookingSection h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+    color: white;
+    letter-spacing: 1px;
+  }
+
+  #applianceBookingForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #applianceBookingForm input,
+  #applianceBookingForm select,
+  #applianceBookingForm textarea {
+    background: var(--input-bg);
+    border: 1px solid #444;
+    padding: 0.75rem;
+    font-size: 1rem;
+    color: var(--text-light);
+    border-radius: var(--border-radius);
+    transition: border-color 0.3s ease;
+  }
+
+  #applianceBookingForm input::placeholder,
+  #applianceBookingForm textarea::placeholder {
+    color: var(--text-muted);
+  }
+
+  #applianceBookingForm input:focus,
+  #applianceBookingForm select:focus,
+  #applianceBookingForm textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+
+  #applianceBookingForm button {
+    background: var(--accent);
+    color: white;
+    padding: 0.9rem;
+    border: none;
+    font-weight: bold;
+    border-radius: var(--border-radius);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  #applianceBookingForm button:hover {
+    background: #3273dc;
+  }
+
+  #bookingConfirmationMsg {
+    margin-top: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    display: none;
+    color: #98ffb3;
+    font-weight: 600;
+  }
+
+  /* 📅 Appointment Section */
+  #bookingTimeFieldset {
+    border: 1px solid #444;
+    border-radius: var(--border-radius);
+    padding: 1rem;
+  }
+
+  #bookingTimeFieldset legend {
+    font-weight: bold;
+    padding: 0 0.5rem;
+    color: #ffffff;
+  }
+
+  #bookingTimeFieldset label {
+    display: block;
+    margin: 0.5rem 0 0.25rem;
+    font-size: 0.95rem;
+    color: #ccc;
+  }
+
+  /* 📱 Mobile Styling */
+  @media (max-width: 500px) {
+    #applianceBookingSection {
+      padding: 1.5rem 1rem;
+      margin: 1rem;
+    }
+
+    #applianceBookingForm input,
+    #applianceBookingForm select,
+    #applianceBookingForm textarea {
+      font-size: 1rem;
+    }
+
+    #applianceBookingForm button {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<!-- ⚙️ Dynamic Issue Dropdown -->
+<script>
+  (function () {
+    const applianceSelect = document.getElementById('appliance');
+    const serviceSelect = document.getElementById('serviceSelect');
+    const form = document.getElementById('applianceBookingForm');
+    const confirmation = document.getElementById('bookingConfirmationMsg');
+
+    const services = {
+      washer: [
+        "Won't start",
+        "Not spinning",
+        "Leaking",
+        "Making noise",
+        "Won't drain"
+      ],
+      dryer: [
+        "Not heating",
+        "Won't start",
+        "Making noise",
+        "Drum not turning",
+        "Takes too long to dry"
+      ],
+      refrigerator: [
+        "Not cooling",
+        "Leaking water",
+        "Freezer warm",
+        "Making noise",
+        "Ice maker broken"
+      ],
+      oven: [
+        "Not heating",
+        "Inaccurate temperature",
+        "Burners not working",
+        "Door broken",
+        "Light not working"
+      ],
+      dishwasher: [
+        "Not draining",
+        "Leaking",
+        "Not cleaning dishes",
+        "Won't start",
+        "Making noise"
+      ],
+      microwave: [
+        "Not heating",
+        "Door won’t close",
+        "Buttons unresponsive",
+        "Making noise",
+        "Light not working"
+      ],
+      icemaker: [
+        "Not making ice",
+        "Leaking",
+        "Noisy operation",
+        "Won't dispense",
+        "Frozen shut"
+      ]
+    };
+
+    applianceSelect.addEventListener('change', () => {
+      const selected = applianceSelect.value;
+      serviceSelect.innerHTML = '<option value="">Select Common Issue</option>';
+
+      if (selected && services[selected]) {
+        services[selected].forEach(issue => {
+          const opt = document.createElement('option');
+          opt.value = issue;
+          opt.textContent = issue;
+          serviceSelect.appendChild(opt);
+        });
+        serviceSelect.disabled = false;
+      } else {
+        serviceSelect.disabled = true;
+      }
+    });
+
+    form.addEventListener('submit', function () {
+      confirmation.style.display = 'block';
+      setTimeout(() => {
+        confirmation.style.display = 'none';
+      }, 7000);
+    });
+  })();
+</script>
+
+
+    <div class="rasta-repair-section" id="rasta-contact">
+      <div class="rasta-repair-box">
+        <h3>Contact Us</h3>
+        <p><strong>📞 Phone:</strong> (248) 248-3361</p>
+        <p><strong>📧 Email:</strong> jsrastarepair@gmail.com</p>
+        <p><strong>📷 Instagram:</strong> <a href="https://instagram.com/jsrastarepair/">@jsrastarepair</a></p>
+        <p><strong>⏰ Hours:</strong> Mon - Sat | 9am - 6pm EST</p>
+      </div>
+    </div>
+
+   <section class="What We Repair">
+  <h2 style="text-align:center; margin-top:2rem;">What We Repair</h2>
+  <div class="appliance-grid">
+    <div><img src="data:image/jpeg;base64,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" alt="Microwave" /></div>
+    <div><img src="https://res.cloudinary.com/guest-supply/image/upload/f_auto,w_auto/Website/Product%20Images/0076321" alt="Stove" /></div>
+    <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn1eztnT2NhPOhGKEGv2uCoYwewBYjQc01CQ&s" alt="Refrigerator" /></div>
+    <div><img src="https://content.abt.com/image.php/bosch-dishwasher-SHX5AEM5N-1.jpg?image=/images/products/BDP_Images/bosch-dishwasher-SHX5AEM5N-1.jpg&canvas=1&width=750&height=550" alt="Dishwasher" /></div>
+    <div><img src="data:image/jpeg;base64,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" alt="Freezer" /></div>
+    <div><img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQf48mxJwKRembQGM2QqIaQJGk7Xq9G3e0TI6wUWqU-mNSFrSZlS5xJ5ZICbkE2YnJHj-DSzZNP-9cUDhxeD_JglhjED-VKnwJR2_NgCqBw&usqp=CAc" alt="Range Hood" /></div>
+    <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxQNCuJb-5HX6Qh6T_hbHXXqSaDGkLbBc40A&s" alt="Garbage Disposal" /></div>
+    <div><img src="data:image/jpeg;base64,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" alt="Washer" /></div>
+    <div><img src="https://images.thdstatic.com/productImages/1c44771c-b6c5-4e63-b980-7681d374dfc0/svn/white-ge-electric-dryers-gtx38easwws-64_1000.jpg" alt="Dryer" /></div>
+    <div><img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcS8fapYceZokUm7l_0naOnaAe4N7awhI79WzMZ94bWzY_3IJB4YtqeFlr_yb39nBKHFXfsMLNt4yvSMhNfPrTQ9ur0kg5oqDcF5tOS8DT9RVlIF_ag_WYQxKQ" alt="HeatPump"/> </div>
+    <div><img src="data:image/jpeg;base64,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" alt="Cameras" /></div>
+    <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj-lJmS5ILme2VUQP_p-C7rHjBmElqMaVgwA&s" alt="IceMAker"/></div>
+    
+    
+  </div>
+</section>
+
+<style>
+  .appliance-gallery {
+    padding: 2rem 1rem;
+    background-color: #222;
+    color: white;
+  }
+
+  .appliance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .appliance-grid img {
+    width: 100%;
+    border-radius: 10px;
+    border: 3px solid #00cc00;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+  }
+
+  .appliance-grid img:hover {
+    transform: scale(1.05);
+  }
+</style>
+
+    
+    
+    
+    <div class="rasta-repair-footer">
+      &copy; 2025 J's Rasta Repair. All rights reserved.
     </div>
   </section>
-
-  <header class="rasta-repair-header">
-    <h1>J's Rasta Repair</h1>
-    <p>Reliable Appliance Repair in South Florida ☀️</p>
-  </header>
-
-  <nav class="rasta-repair-nav">
-    <a href="#services">Services</a>
-    <a href="#repairs">What We Repair</a>
-    <a href="#booking">Booking</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section class="rasta-repair-hero">
-    <h2 style="background: rgba(0,0,0,0.7); padding: 1rem; border-radius: 10px;">REPAIR RATHER THAN REPLACE!</h2>
-  </section>
-
-  <div class="rasta-repair-box" id="services">
-    <h3 style="color: var(--rasta-gold);">Our Expertise</h3>
-    <ul style="column-count: 2; list-style: none; padding: 0;">
-      <li>🔧 Washer & Dryer Repairs</li>
-      <li>🧊 Refrigerator & IceMaker</li>
-      <li>🔥 Oven & Stove Repairs</li>
-      <li>📺 Small Appliance Repairs</li>
-      <li>🏠 In-Home Diagnostics</li>
-      <li>🧹 Dryer Vent Cleanings</li>
-      <li>💨 HVAC AC Repairs</li>
-      <li>📷 Security Systems</li>
-    </ul>
-  </div>
-
-  <div class="rasta-repair-box" id="repairs">
-    <h3 style="color: var(--rasta-gold); text-align: center;">What We Repair</h3>
-    <div class="appliance-grid">
-      <div class="appliance-item"><img src="https://images.thdstatic.com/productImages/1c44771c-b6c5-4e63-b980-7681d374dfc0/svn/white-ge-electric-dryers-gtx38easwws-64_1000.jpg"><span>Dryers</span></div>
-      <div class="appliance-item"><img src="https://content.abt.com/image.php/bosch-dishwasher-SHX5AEM5N-1.jpg?width=750&height=550"><span>Dishwashers</span></div>
-      <div class="appliance-item"><img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=400"><span>Washers</span></div>
-      <div class="appliance-item"><img src="https://images.unsplash.com/photo-1571175432270-ef02d9bcc9b2?auto=format&fit=crop&w=400"><span>Refrigerators</span></div>
-    </div>
-  </div>
-
-  <div class="rasta-repair-box" id="booking">
-    <h3 style="text-align: center;">Book A Repair</h3>
-    <form action="https://formspree.io/f/xldnkllv" method="POST" id="applianceBookingForm">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="tel" name="phone" placeholder="Phone Number" required />
-      <select name="appliance" id="appliance" required>
-        <option value="" disabled selected>Select Appliance</option>
-        <option value="washer">Washer</option>
-        <option value="dryer">Dryer</option>
-        <option value="refrigerator">Refrigerator</option>
-        <option value="oven">Oven / Stove</option>
-      </select>
-      <input type="date" name="date" required />
-      <textarea name="problem" placeholder="What's the issue?" rows="3"></textarea>
-      <button type="submit">SUBMIT BOOKING</button>
-    </form>
-  </div>
-
-  <div class="rasta-repair-box" id="contact" style="text-align: center;">
-    <h3>Contact Us</h3>
-    <p>📞 (248) 248-3361 | 📧 jsrastarepair@gmail.com</p>
-    <p>Mon - Sat | 9am - 6pm EST</p>
-    <div class="brand-logos">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/General_Electric_logo.svg">
-    </div>
-  </div>
-
-  <footer>
-    &copy; 2024 J's Rasta Repair & HighOffGaming. All Rights Reserved.
-  </footer>
-
 </body>
+  
+<script>
+  ...
+  // Disable past dates
+  const today = new Date().toISOString().split("T")[0];
+  document.getElementById("bookingDate").setAttribute("min", today);
+</script>
+  
 </html>
