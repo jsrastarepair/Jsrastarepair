@@ -290,44 +290,50 @@
         &copy; 2025 J's Rasta Repair.
     </footer>
 
-    <script>
-        (function () {
-            const applianceSelect = document.getElementById('appliance');
-            const serviceSelect = document.getElementById('serviceSelect');
-            const form = document.getElementById('applianceBookingForm');
-            const confirmation = document.getElementById('bookingConfirmationMsg');
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const applianceSelect = document.getElementById('appliance');
+    const serviceSelect = document.getElementById('serviceSelect');
+    const form = document.getElementById('applianceBookingForm');
+    const confirmation = document.getElementById('bookingConfirmationMsg');
 
-            const services = {
-                washer: ["Won't start", "Not spinning", "Leaking", "Making noise", "Won't drain"],
-                dryer: ["Not heating", "Won't start", "Making noise", "Drum not turning", "Takes too long to dry"],
-                refrigerator: ["Not cooling", "Leaking water", "Freezer warm", "Making noise", "Ice maker broken"],
-                oven: ["Not heating", "Inaccurate temperature", "Burners not working", "Door broken", "Light not working"],
-                dishwasher: ["Not draining", "Leaking", "Not cleaning dishes", "Won't start", "Making noise"],
-                microwave: ["Not heating", "Door won’t close", "Buttons unresponsive", "Making noise", "Light not working"],
-                icemaker: ["Not making ice", "Leaking", "Noisy operation", "Won't dispense", "Frozen shut"]
-            };
+    if (!applianceSelect || !serviceSelect || !form || !confirmation) return;
 
-            applianceSelect.addEventListener('change', () => {
-                const selected = applianceSelect.value;
-                serviceSelect.innerHTML = '<option value="">Select Common Issue</option>';
-                if (selected && services[selected]) {
-                    services[selected].forEach(issue => {
-                        const opt = document.createElement('option');
-                        opt.value = issue;
-                        opt.textContent = issue;
-                        serviceSelect.appendChild(opt);
-                    });
-                    serviceSelect.disabled = false;
-                } else {
-                    serviceSelect.disabled = true;
-                }
+    const services = {
+        washer: ["Won't start", "Not spinning", "Leaking", "Making noise", "Won't drain"],
+        dryer: ["Not heating", "Won't start", "Making noise", "Drum not turning", "Takes too long to dry"],
+        refrigerator: ["Not cooling", "Leaking water", "Freezer warm", "Making noise", "Ice maker broken"],
+        oven: ["Not heating", "Inaccurate temperature", "Burners not working", "Door broken", "Light not working"],
+        dishwasher: ["Not draining", "Leaking", "Not cleaning dishes", "Won't start", "Making noise"],
+        microwave: ["Not heating", "Door won’t close", "Buttons unresponsive", "Making noise", "Light not working"],
+        icemaker: ["Not making ice", "Leaking", "Noisy operation", "Won't dispense", "Frozen shut"]
+    };
+
+    applianceSelect.addEventListener('change', () => {
+        const selected = applianceSelect.value;
+
+        serviceSelect.innerHTML = '<option value="">Select Common Issue</option>';
+        serviceSelect.disabled = true;
+
+        if (services[selected]) {
+            services[selected].forEach(issue => {
+                const opt = document.createElement('option');
+                opt.value = issue;
+                opt.textContent = issue;
+                serviceSelect.appendChild(opt);
             });
+            serviceSelect.disabled = false;
+        }
+    });
 
-            form.addEventListener('submit', function () {
-                confirmation.style.display = 'block';
-                setTimeout(() => { confirmation.style.display = 'none'; }, 7000);
-            });
-        })();
-    </script>
+    form.addEventListener('submit', () => {
+        confirmation.style.display = 'block';
+        setTimeout(() => {
+            confirmation.style.display = 'none';
+        }, 7000);
+    });
+});
+</script>
+    
 </body>
 </html>
