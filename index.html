@@ -7,6 +7,7 @@
     <meta name="google-site-verification" content="Or5_Vx9kwk54B0SasOJ10wuZbywHgE45uYVV_YpuVj0" />
 
     <style>
+        /* --- GLOBAL STYLES --- */
         :root {
             --bg-dark: #1c1f2b;
             --accent: #3f8cff;
@@ -23,6 +24,7 @@
             background: linear-gradient(to bottom, #1a1a1a, #333);
         }
 
+        /* --- HEADER & NAVIGATION --- */
         .rasta-repair-header {
             background: linear-gradient(90deg, #ff0000, #ffff00, #00cc00);
             text-align: center;
@@ -56,6 +58,7 @@
             color: #00cc00;
         }
 
+        /* --- HERO SECTION --- */
         .rasta-repair-hero {
             text-align: center;
             padding: 3rem 1rem;
@@ -64,6 +67,15 @@
             color: white;
         }
 
+        .rasta-repair-hero h2 {
+            font-size: 2.2rem;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 10px;
+        }
+
+        /* --- CONTENT BOXES --- */
         .rasta-repair-section {
             padding: 2rem 1rem;
             max-width: 1000px;
@@ -83,6 +95,7 @@
             margin-bottom: 1rem;
         }
 
+        /* --- BRAND LOGOS --- */
         .rasta-repair-logos {
             display: flex;
             flex-wrap: wrap;
@@ -94,7 +107,7 @@
         .rasta-repair-logos img {
             max-width: 100px;
             height: auto;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, filter 0.3s ease;
             filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
         }
 
@@ -102,6 +115,7 @@
             transform: scale(1.1);
         }
 
+        /* --- BOOKING FORM STYLES --- */
         #applianceBookingSection {
             background: var(--bg-dark);
             color: var(--text-light);
@@ -152,127 +166,168 @@
             text-align: center;
         }
 
+        /* --- RESPONSIVE DESIGN --- */
         @media (max-width: 600px) {
             .rasta-repair-header h1 { font-size: 2rem; }
+            .rasta-repair-hero h2 { font-size: 1.5rem; }
             #applianceBookingSection { margin: 1rem; padding: 1rem; }
         }
     </style>
 </head>
-
 <body>
 
-<header class="rasta-repair-header">
-    <h1>J's Rasta Repair</h1>
-    <p>Reliable Appliance Repair in South Florida ☀️</p>
-</header>
+    <header class="rasta-repair-header">
+        <h1>J's Rasta Repair</h1>
+        <p>Reliable Appliance Repair in South Florida ☀️</p>
+    </header>
 
-<nav class="rasta-repair-nav">
-    <a href="#rasta-services">Services</a>
-    <a href="#rasta-booking">Booking</a>
-    <a href="#rasta-we-repair">What We Repair</a>
-    <a href="#rasta-contact">Contact</a>
-</nav>
+    <nav class="rasta-repair-nav">
+        <a href="#rasta-services">Services</a>
+        <a href="#rasta-booking">Booking</a>
+        <a href="#rasta-we-repair">What We Repair</a>
+        <a href="#rasta-contact">Contact</a>
+    </nav>
 
-<main class="rasta-repair-section" id="rasta-services">
-    <div class="rasta-repair-box">
-        <h3>Our Services</h3>
-        <ul>
-            <li>🔧 Washer & Dryer Repairs</li>
-            <li>🧊 Refrigerator & IceMaker Repairs</li>
-            <li>🔥 Oven & Stove Repairs</li>
-            <li>📺 Microwave & Small Appliance Repairs</li>
-            <li>🏠 In-Home Diagnostics</li>
-            <li>🧹 Dryer or Vent Cleanings</li>
-            <li>💨 HVAC Ac & Cooling Repairs</li>
-            <li>📷 Security System Installations & Repairs</li>
-        </ul>
-    </div>
-</main>
+    <main class="rasta-repair-section" id="rasta-services">
+        <div class="rasta-repair-box">
+            <h3>Our Services</h3>
+            <ul>
+                <li>🔧 Washer & Dryer Repairs</li>
+                <li>🧊 Refrigerator & IceMaker Repairs</li>
+                <li>🔥 Oven & Stove Repairs</li>
+                <li>📺 Microwave & Small Appliance Repairs</li>
+                <li>🏠 In-Home Diagnostics</li>
+                <li>🧹 Dryer or Vent Cleanings</li>
+                <li>💨 HVAC Ac & Cooling Repairs</li>
+                <li>📷 Security System Installations & Repairs</li>
+            </ul>
+        </div>
 
-<section class="rasta-repair-section" id="rasta-booking">
-    <div id="applianceBookingSection">
-        <h2>Book A Repair</h2>
+        <div class="rasta-repair-box">
+            <h3>Brands We Service</h3>
+            <div class="rasta-repair-logos">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/General_Electric_logo.svg" alt="GE">
+                <img src="https://static.wikia.nocookie.net/logopedia/images/7/7e/LG_logo_2023.svg" alt="LG">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Bosch-Logo.svg" alt="Bosch">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Electrolux_2015.svg" alt="Electrolux">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Samsung_Black_icon.svg" alt="Samsung">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3wY9whgAodqCfcqel6Ju4LgCjtdENzhTB9Q&s" alt="Whirlpool">
+                <img src="https://vectorlogoseek.com/wp-content/uploads/2018/11/amana-vector-logo.png" alt="Amana">
+            </div>
+        </div>
+    </main>
 
-        <form action="https://formspree.io/f/xldnkllv" method="POST" id="applianceBookingForm">
-            <input type="hidden" name="_subject" value="New Appliance Repair Booking">
+    <section class="rasta-repair-section" id="rasta-booking">
+        <div id="applianceBookingSection">
+            <h2>Book A Repair</h2>
+            <form action="https://formspree.io/f/xldnkllv" method="POST" id="applianceBookingForm">
+                <input type="hidden" name="_subject" value="New Appliance Repair Booking">
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="tel" name="phone" placeholder="Phone Number (10 digits)" pattern="[0-9]{10}" required />
+                <input type="text" name="zip" placeholder="Zip Code (5 digits)" pattern="\d{5}" required />
+                <input type="email" name="email" placeholder="Email (optional)" />
 
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="tel" name="phone" placeholder="Phone Number (10 digits)" pattern="[0-9]{10}" required>
-            <input type="text" name="zip" placeholder="Zip Code (5 digits)" pattern="\d{5}" required>
-            <input type="email" name="email" placeholder="Email (optional)">
+                <select name="appliance" id="appliance" required>
+                    <option value="" disabled selected>Select Appliance Type</option>
+                    <option value="washer">Washer</option>
+                    <option value="dryer">Dryer</option>
+                    <option value="refrigerator">Refrigerator</option>
+                    <option value="oven">Oven / Stove</option>
+                    <option value="dishwasher">Dishwasher</option>
+                    <option value="microwave">Microwave</option>
+                    <option value="icemaker">Ice Maker</option>
+                </select>
 
-            <select name="appliance" id="appliance" required>
-                <option value="" disabled selected>Select Appliance Type</option>
-                <option value="washer">Washer</option>
-                <option value="dryer">Dryer</option>
-                <option value="refrigerator">Refrigerator</option>
-                <option value="oven">Oven / Stove</option>
-                <option value="dishwasher">Dishwasher</option>
-                <option value="microwave">Microwave</option>
-                <option value="icemaker">Ice Maker</option>
-            </select>
+                <select name="service" id="serviceSelect" required disabled>
+                    <option value="">Select Common Issue</option>
+                </select>
 
-            <select name="service" id="serviceSelect" required disabled>
-                <option value="">Select Common Issue</option>
-            </select>
+                <textarea name="problem" placeholder="Additional details (optional)" rows="4"></textarea>
 
-            <textarea name="problem" rows="4" placeholder="Additional details (optional)"></textarea>
+                <fieldset id="bookingTimeFieldset">
+                    <legend>📅 Preferred Appointment</legend>
+                    <label for="bookingDate">Choose a date:</label>
+                    <input type="date" name="date" id="bookingDate" required />
+                    <label for="bookingTime">Choose a time:</label>
+                    <input type="time" name="time" id="bookingTime" required />
+                </fieldset>
 
-            <fieldset id="bookingTimeFieldset">
-                <legend>📅 Preferred Appointment</legend>
-                <input type="date" name="date" required>
-                <input type="time" name="time" required>
-            </fieldset>
+                <button type="submit">Book Now</button>
+            </form>
+            <div id="bookingConfirmationMsg">✅ Thank you! Your booking has been submitted.</div>
+        </div>
+    </section>
 
-            <button type="submit">Book Now</button>
-        </form>
+    <section class="rasta-repair-section" id="rasta-we-repair">
+        <h2 style="text-align:center;">What We Repair</h2>
+        
+        <div class="rasta-repair-logos">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/025/440/555/small/object-microwave-kitchen-cartoon-illustration-vector.jpg" alt="Microwave" />
+            <img src="https://res.cloudinary.com/guest-supply/image/upload/f_auto,w_auto/Website/Product%20Images/0076321" alt="Stove" />
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn1eztnT2NhPOhGKEGv2uCoYwewBYjQc01CQ&s" alt="Refrigerator" />
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFDiw6nuNuAibpoP5Suj0A3N07U-IIKSR79tbihBqjWw&s=10" alt="Dishwasher" />
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSR-WEFzu7H1ckw0rl6bOxLk5Q4niLI3defc8q36uyBg&s=10" alt="Ice Maker" />
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQf48mxJwKRembQGM2QqIaQJGk7Xq9G3e0TI6wUWqU-mNSFrSZlS5xJ5ZICbkE2YnJHj-DSzZNP-9cUDhxeD_JglhjED-VKnwJR2_NgCqBw&usqp=CAc" alt="Range Hood" />
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxQNCuJb-5HX6Qh6T_hbHXXqSaDGkLbBc40A&s" alt="Garbage Disposal" />
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDmhmS_2TMD2KTDdTxk7RCVhNDnQ7JcEztLgXusCmyww&s=10" alt="Washer" />
+            <img src="https://images.thdstatic.com/productImages/1c44771c-b6c5-4e63-b980-7681d374dfc0/svn/white-ge-electric-dryers-gtx38easwws-64_1000.jpg" alt="Dryer" />
+            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcS8fapYceZokUm7l_0naOnaAe4N7awhI79WzMZ94bWzY_3IJB4YtqeFlr_yb39nBKHFXfsMLNt4yvSMhNfPrTQ9ur0kg5oqDcF5tOS8DT9RVlIF_ag_WYQxKQ" alt="HeatPump"/>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROGnvJxUCKKkZEW95OH9n2n-fe_N_4GJTSHcn6v247Og&s=10" alt="CAMERA"/>
+        </div>
+    </section>
 
-        <div id="bookingConfirmationMsg">✅ Thank you! Your booking has been submitted.</div>
-    </div>
-</section>
+    <section class="rasta-repair-section" id="rasta-contact">
+        <div class="rasta-repair-box">
+            <h3>Contact Us</h3>
+            <p><strong>📞 Phone:</strong> (248) 248-3361</p>
+            <p><strong>📧 Email:</strong> jsrastarepair@gmail.com</p>
+            <p><strong>📷 Instagram:</strong> <a href="https://instagram.com/jsrastarepair/" style="color:cyan;">@jsrastarepair</a></p>
+            <p><strong>⏰ Hours:</strong> Mon - Sat | 8am - 8pm EST</p>
+        </div>
+    </section>
 
-<footer style="background:#111;text-align:center;padding:1.5rem;color:#ccc;margin-top:2rem;">
-    &copy; 2025 J's Rasta Repair.
-</footer>
+    <footer style="background: #111; text-align: center; padding: 1.5rem; color: #ccc; margin-top: 2rem;">
+        &copy; 2025 J's Rasta Repair.
+    </footer>
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const applianceSelect = document.getElementById('appliance');
-    const serviceSelect = document.getElementById('serviceSelect');
-    const form = document.getElementById('applianceBookingForm');
-    const confirmation = document.getElementById('bookingConfirmationMsg');
+    <script>
+        (function () {
+            const applianceSelect = document.getElementById('appliance');
+            const serviceSelect = document.getElementById('serviceSelect');
+            const form = document.getElementById('applianceBookingForm');
+            const confirmation = document.getElementById('bookingConfirmationMsg');
 
-    const services = {
-        washer: ["Won't start", "Not spinning", "Leaking", "Making noise", "Won't drain"],
-        dryer: ["Not heating", "Won't start", "Making noise", "Drum not turning", "Takes too long to dry"],
-        refrigerator: ["Not cooling", "Leaking water", "Freezer warm", "Making noise", "Ice maker broken"],
-        oven: ["Not heating", "Inaccurate temperature", "Burners not working", "Door broken", "Light not working"],
-        dishwasher: ["Not draining", "Leaking", "Not cleaning dishes", "Won't start", "Making noise"],
-        microwave: ["Not heating", "Door won’t close", "Buttons unresponsive", "Making noise", "Light not working"],
-        icemaker: ["Not making ice", "Leaking", "Noisy operation", "Won't dispense", "Frozen shut"]
-    };
+            const services = {
+                washer: ["Won't start", "Not spinning", "Leaking", "Making noise", "Won't drain"],
+                dryer: ["Not heating", "Won't start", "Making noise", "Drum not turning", "Takes too long to dry"],
+                refrigerator: ["Not cooling", "Leaking water", "Freezer warm", "Making noise", "Ice maker broken"],
+                oven: ["Not heating", "Inaccurate temperature", "Burners not working", "Door broken", "Light not working"],
+                dishwasher: ["Not draining", "Leaking", "Not cleaning dishes", "Won't start", "Making noise"],
+                microwave: ["Not heating", "Door won’t close", "Buttons unresponsive", "Making noise", "Light not working"],
+                icemaker: ["Not making ice", "Leaking", "Noisy operation", "Won't dispense", "Frozen shut"]
+            };
 
-    applianceSelect.addEventListener('change', () => {
-        serviceSelect.innerHTML = '<option value="">Select Common Issue</option>';
-        serviceSelect.disabled = true;
-
-        if (services[applianceSelect.value]) {
-            services[applianceSelect.value].forEach(issue => {
-                const opt = document.createElement('option');
-                opt.value = issue;
-                opt.textContent = issue;
-                serviceSelect.appendChild(opt);
+            applianceSelect.addEventListener('change', () => {
+                const selected = applianceSelect.value;
+                serviceSelect.innerHTML = '<option value="">Select Common Issue</option>';
+                if (selected && services[selected]) {
+                    services[selected].forEach(issue => {
+                        const opt = document.createElement('option');
+                        opt.value = issue;
+                        opt.textContent = issue;
+                        serviceSelect.appendChild(opt);
+                    });
+                    serviceSelect.disabled = false;
+                } else {
+                    serviceSelect.disabled = true;
+                }
             });
-            serviceSelect.disabled = false;
-        }
-    });
 
-    form.addEventListener('submit', () => {
-        confirmation.style.display = 'block';
-        setTimeout(() => confirmation.style.display = 'none', 7000);
-    });
-});
-</script>
-
+            form.addEventListener('submit', function () {
+                confirmation.style.display = 'block';
+                setTimeout(() => { confirmation.style.display = 'none'; }, 7000);
+            });
+        })();
+    </script>
 </body>
 </html>
