@@ -367,12 +367,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     form.addEventListener('submit', () => {
+    setTimeout(() => {
         confirmation.style.display = 'block';
         setTimeout(() => {
             confirmation.style.display = 'none';
         }, 7000);
-    });
+    }, 600);
 });
+
 </script>
     
 </body>
