@@ -3,23 +3,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>J's Rasta Repair | Appliance Repair in South Florida</title>
-
-
-    
-    <meta name="description" content="J's Rasta Repair provides reliable appliance repair services across South Florida. Washer, dryer, refrigerator, oven, HVAC, and more. Book online today." />
-  
-    
-    <meta property="og:title" content="J's Rasta Repair | South Florida Appliance Repair" />
-    <meta property="og:description" content="Reliable appliance repair services in South Florida. Washers, dryers, refrigerators, Ovens and Stove-tops, Dishwashers,Tv Mounting,Camera installations & more." />
-    <meta property="og:type" content="website" />
-    
+    <title>J's Rasta Repair</title>
     <meta name="google-site-verification" content="Or5_Vx9kwk54B0SasOJ10wuZbywHgE45uYVV_YpuVj0" />
 
-
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
-    
     <style>
         /* --- GLOBAL STYLES --- */
         :root {
@@ -131,8 +117,8 @@
 
         /* --- BOOKING FORM STYLES --- */
         #applianceBookingSection {
-            background: var(--bg-light);
-            color: var(--text-dark);
+            background: var(--bg-dark);
+            color: var(--text-light);
             max-width: 600px;
             margin: 2rem auto;
             padding: 2rem;
@@ -187,76 +173,12 @@
             #applianceBookingSection { margin: 1rem; padding: 1rem; }
         }
     </style>
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "J's Rasta Repair",
-  "description": "Appliance repair services in Fort Lauderdale, Florida",
-  "telephone": "(248) 248-3361",
-  "email": "jsrastarepair@gmail.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Fort Lauderdale",
-    "addressRegion": "FL",
-    "addressCountry": "US"
-  },
-  "areaServed": {
-    "@type": "City",
-    "name": "Fort Lauderdale"
-  },
-  "serviceType": "Appliance Repair",
-  "openingHours": "Mo-Sa 08:00-20:00"
-}
-</script>
-
-<a href="tel:+12482483361" class="floating-call"
-
-.floating-call {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #00cc00;
-  color: #000;
-  padding: 14px 18px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  border-radius: 50px;
-  text-decoration: none;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-  z-index: 9999;
-}
-
-@media (min-width: 768px) {
-  .floating-call {
-    display: none; /* mobile-only */
-  }
-}
-
-      📞 Call Now 
-</a>
-
 </head>
 <body>
 
     <header class="rasta-repair-header">
         <h1>J's Rasta Repair</h1>
         <p>Reliable Appliance Repair in South Florida ☀️</p>
-
-     <a href="tel:+12482483361" style="
-display:block;
-margin-top:0.5rem;
-font-size:1.2rem;
-color:#000000;
-font-weight:bold;">
-📞 Call Now: (954) 548-9364
-        
-    
-</a>
-
-        
     </header>
 
     <nav class="rasta-repair-nav">
@@ -298,20 +220,6 @@ font-weight:bold;">
     <section class="rasta-repair-section" id="rasta-booking">
         <div id="applianceBookingSection">
             <h2>Book A Repair</h2>
-
-              <a href="tel:+12482483361" style="
-display:block;
-margin-top:0.5rem;
-font-size:1.2rem;
-color:#FFFFFF;
-font-weight:bold;">
-📞 Call Now: (248) 248-3361
-</a>
-
-
-        
-    
-            
             <form action="https://formspree.io/f/xldnkllv" method="POST" id="applianceBookingForm">
                 <input type="hidden" name="_subject" value="New Appliance Repair Booking">
                 <input type="text" name="name" placeholder="Your Name" required />
@@ -348,7 +256,7 @@ font-weight:bold;">
             </form>
             <div id="bookingConfirmationMsg">✅ Thank you! Your booking has been submitted.</div>
         </div>
-       </section>
+    </section>
 
     <section class="rasta-repair-section" id="rasta-we-repair">
         <h2 style="text-align:center;">What We Repair</h2>
@@ -371,7 +279,7 @@ font-weight:bold;">
     <section class="rasta-repair-section" id="rasta-contact">
         <div class="rasta-repair-box">
             <h3>Contact Us</h3>
-            <p><strong>📞 Office:</strong> (248) 248-3361</p>
+            <p><strong>📞 Phone:</strong> (248) 248-3361</p>
             <p><strong>📧 Email:</strong> jsrastarepair@gmail.com</p>
             <p><strong>📷 Instagram:</strong> <a href="https://instagram.com/jsrastarepair/" style="color:cyan;">@jsrastarepair</a></p>
             <p><strong>⏰ Hours:</strong> Mon - Sat | 8am - 8pm EST</p>
@@ -382,52 +290,44 @@ font-weight:bold;">
         &copy; 2025 J's Rasta Repair.
     </footer>
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const applianceSelect = document.getElementById('appliance');
-    const serviceSelect = document.getElementById('serviceSelect');
-    const form = document.getElementById('applianceBookingForm');
-    const confirmation = document.getElementById('bookingConfirmationMsg');
+    <script>
+        (function () {
+            const applianceSelect = document.getElementById('appliance');
+            const serviceSelect = document.getElementById('serviceSelect');
+            const form = document.getElementById('applianceBookingForm');
+            const confirmation = document.getElementById('bookingConfirmationMsg');
 
-    if (!applianceSelect || !serviceSelect || !form || !confirmation) return;
+            const services = {
+                washer: ["Won't start", "Not spinning", "Leaking", "Making noise", "Won't drain"],
+                dryer: ["Not heating", "Won't start", "Making noise", "Drum not turning", "Takes too long to dry"],
+                refrigerator: ["Not cooling", "Leaking water", "Freezer warm", "Making noise", "Ice maker broken"],
+                oven: ["Not heating", "Inaccurate temperature", "Burners not working", "Door broken", "Light not working"],
+                dishwasher: ["Not draining", "Leaking", "Not cleaning dishes", "Won't start", "Making noise"],
+                microwave: ["Not heating", "Door won’t close", "Buttons unresponsive", "Making noise", "Light not working"],
+                icemaker: ["Not making ice", "Leaking", "Noisy operation", "Won't dispense", "Frozen shut"]
+            };
 
-    const services = {
-        washer: ["Won't start", "Not spinning", "Leaking", "Making noise", "Won't drain"],
-        dryer: ["Not heating", "Won't start", "Making noise", "Drum not turning", "Takes too long to dry"],
-        refrigerator: ["Not cooling", "Leaking water", "Freezer warm", "Making noise", "Ice maker broken"],
-        oven: ["Not heating", "Inaccurate temperature", "Burners not working", "Door broken", "Light not working"],
-        dishwasher: ["Not draining", "Leaking", "Not cleaning dishes", "Won't start", "Making noise"],
-        microwave: ["Not heating", "Door won’t close", "Buttons unresponsive", "Making noise", "Light not working"],
-        icemaker: ["Not making ice", "Leaking", "Noisy operation", "Won't dispense", "Frozen shut"]
-    };
-
-    applianceSelect.addEventListener('change', () => {
-        const selected = applianceSelect.value;
-
-        serviceSelect.innerHTML = '<option value="">Select Common Issue</option>';
-        serviceSelect.disabled = true;
-
-        if (services[selected]) {
-            services[selected].forEach(issue => {
-                const opt = document.createElement('option');
-                opt.value = issue;
-                opt.textContent = issue;
-                serviceSelect.appendChild(opt);
+            applianceSelect.addEventListener('change', () => {
+                const selected = applianceSelect.value;
+                serviceSelect.innerHTML = '<option value="">Select Common Issue</option>';
+                if (selected && services[selected]) {
+                    services[selected].forEach(issue => {
+                        const opt = document.createElement('option');
+                        opt.value = issue;
+                        opt.textContent = issue;
+                        serviceSelect.appendChild(opt);
+                    });
+                    serviceSelect.disabled = false;
+                } else {
+                    serviceSelect.disabled = true;
+                }
             });
-            serviceSelect.disabled = false;
-        }
-    });
 
-    form.addEventListener('submit', () => {
-    setTimeout(() => {
-        confirmation.style.display = 'block';
-        setTimeout(() => {
-            confirmation.style.display = 'none';
-        }, 7000);
-    }, 600);
-});
-
-</script>
-    
+            form.addEventListener('submit', function () {
+                confirmation.style.display = 'block';
+                setTimeout(() => { confirmation.style.display = 'none'; }, 7000);
+            });
+        })();
+    </script>
 </body>
 </html>
