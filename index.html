@@ -169,6 +169,96 @@ footer {
     .rasta-repair-header h1 { font-size: 2rem; }
     .rasta-repair-hero h2 { font-size: 1.6rem; }
 }
+
+/* ===============================
+   LAYOUT CLEANUP (NO CORE CHANGES)
+   =============================== */
+
+/* Improve overall vertical rhythm */
+.rasta-repair-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Make service list easier to read */
+.rasta-repair-box ul {
+  padding-left: 1.2rem;
+  line-height: 1.8;
+}
+
+.rasta-repair-box ul li {
+  margin-bottom: 0.4rem;
+}
+
+/* Center headings consistently */
+.rasta-repair-box h3,
+.rasta-repair-section > h2 {
+  text-align: center;
+}
+
+/* Clean grid for logos & repair images */
+.rasta-repair-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 1.5rem;
+  align-items: center;
+  justify-items: center;
+  margin-top: 1rem;
+}
+
+/* Normalize image appearance */
+.rasta-repair-logos img {
+  max-height: 70px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Booking section spacing */
+#applianceBookingSection h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#applianceBookingForm {
+  gap: 1.1rem;
+}
+
+/* Center confirmation message */
+#bookingConfirmationMsg {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Contact section alignment */
+#rasta-contact .rasta-repair-box p {
+  margin: 0.4rem 0;
+  text-align: center;
+}
+
+/* Footer spacing consistency */
+footer {
+  margin-top: 3rem;
+}
+
+/* Mobile spacing refinement */
+@media (max-width: 600px) {
+  .rasta-repair-section {
+    padding: 2rem 1rem;
+  }
+
+  .rasta-repair-box {
+    padding: 1.4rem;
+  }
+
+  .rasta-repair-logos {
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  }
+}
+
+
+        
 </style>
 
 
