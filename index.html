@@ -4,164 +4,127 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>J’s Rasta Appliance Repair | Same-Day Service in South Florida</title>
-
-<meta name="description" content="Professional appliance repair in South Florida. Same-day service for refrigerators, washers, dryers, ovens & dishwashers. Call now or book online.">
+<title>J’s Rasta Appliance Repair — Professional Appliance Repair South Florida</title>
+<meta name="description" content="Professional appliance repair across South Florida. Refrigerators, washers, dryers, ovens & more. Same-day service. Book online or call now.">
 
 <link rel="icon" href="/favicon.ico">
 
 <style>
 :root {
-  --primary:#1f4fd8;
+  --primary:#0057d9;
   --dark:#1f2937;
+  --accent:#ffcc00;
   --light:#f9fafb;
-  --muted:#6b7280;
-  --radius:12px;
+  --radius:10px;
 }
 
 * { box-sizing:border-box; }
 
 body {
   margin:0;
-  font-family:Segoe UI, Tahoma, sans-serif;
-  background:#ffffff;
-  color:#111827;
-  line-height:1.6;
+  font-family:Segoe UI, Arial, sans-serif;
+  color:#111;
+  background:#fff;
 }
 
 /* HEADER */
 header {
   background:var(--dark);
   color:white;
-  padding:1.2rem;
+  padding:1rem 2rem;
+  text-align:center;
 }
-
-.header-inner {
-  max-width:1100px;
-  margin:auto;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap;
-}
-
 header h1 {
   margin:0;
-  font-size:1.8rem;
+  font-size:2rem;
 }
-
-header .cta a {
-  background:var(--primary);
-  color:white;
-  padding:0.6rem 1rem;
-  border-radius:var(--radius);
-  text-decoration:none;
+header .phone {
+  margin-top:0.5rem;
+  font-size:1.2rem;
   font-weight:bold;
 }
 
 /* HERO */
 .hero {
-  background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
-  url('https://images.unsplash.com/photo-1581090463770-52641eae0b43?fit=crop&w=1600&q=80');
-  background-size:cover;
-  color:white;
   text-align:center;
-  padding:4rem 1rem;
+  padding:3rem 1rem;
+  background:#eef2f7;
 }
-
+.hero img {
+  width:100%;
+  max-height:350px;
+  object-fit:cover;
+  border-radius:var(--radius);
+}
 .hero h2 {
   font-size:2.4rem;
-  margin-bottom:1rem;
+  margin:1rem 0 0.5rem;
 }
-
 .hero p {
   font-size:1.1rem;
+  color:var(--dark);
 }
 
 /* SECTIONS */
 section {
-  max-width:1100px;
+  padding:2rem 1rem;
+  width:90%;
   margin:auto;
-  padding:3rem 1rem;
 }
-
 .section-title {
   text-align:center;
-  margin-bottom:2rem;
+  font-size:1.8rem;
+  margin-bottom:1.5rem;
+  color:var(--dark);
+}
+
+/* SERVICE PHOTOS */
+.photo-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:1rem;
+}
+.photo-grid img {
+  width:100%;
+  border-radius:var(--radius);
 }
 
 /* SERVICES */
-.services-grid {
+.services {
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:1.5rem;
-}
-
-.service-box {
-  border:1px solid #e5e7eb;
-  padding:1.5rem;
-  border-radius:var(--radius);
-  text-align:center;
-}
-
-/* WHY US */
-.why ul {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
   gap:1rem;
-  list-style:none;
-  padding:0;
+  margin-top:1rem;
 }
-
-.why li {
-  background:#f3f4f6;
+.services div {
+  background:#eef2f7;
   padding:1rem;
+  text-align:center;
   border-radius:var(--radius);
-  font-weight:500;
-}
-
-/* BRANDS */
-.brands {
-  display:flex;
-  justify-content:center;
-  gap:1.5rem;
-  flex-wrap:wrap;
-}
-
-.brands img {
-  max-height:40px;
+  font-weight:600;
 }
 
 /* BOOKING */
-.booking {
-  background:#f9fafb;
-  border-radius:var(--radius);
-  padding:2rem;
-  max-width:600px;
-  margin:auto;
-}
-
 .booking form {
   display:flex;
   flex-direction:column;
   gap:1rem;
 }
-
 .booking input,
 .booking select,
 .booking textarea,
 .booking button {
-  padding:0.75rem;
+  padding:0.8rem;
   font-size:1rem;
+  border:1px solid #ccc;
+  border-radius:var(--radius);
 }
-
 .booking button {
   background:var(--primary);
   color:white;
   border:none;
-  border-radius:var(--radius);
-  font-weight:bold;
   cursor:pointer;
+  font-weight:bold;
 }
 
 /* FOOTER */
@@ -170,91 +133,44 @@ footer {
   color:#d1d5db;
   text-align:center;
   padding:2rem 1rem;
+  margin-top:2rem;
 }
 
-/* MOBILE CALL BUTTON */
-.floating-call {
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:var(--primary);
-  color:white;
-  padding:14px 18px;
-  border-radius:50px;
-  text-decoration:none;
-  font-weight:bold;
-}
-
-@media(min-width:768px){
-  .floating-call { display:none; }
-}
 </style>
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"LocalBusiness",
-  "name":"J’s Rasta Appliance Repair",
-  "telephone":"(248) 248-3361",
-  "address":{
-    "@type":"PostalAddress",
-    "addressRegion":"FL",
-    "addressCountry":"US"
-  },
-  "areaServed":"South Florida",
-  "openingHours":"Mo-Sa 08:00-20:00"
-}
-</script>
-
 </head>
 <body>
 
 <header>
-  <div class="header-inner">
-    <h1>J’s Rasta Appliance Repair</h1>
-    <div class="cta">
-      <a href="tel:+12482483361">📞 Call Now</a>
-    </div>
-  </div>
+  <h1>J’s Rasta Appliance Repair</h1>
+  <div class="phone">📞 (954) 548-9364</div>
 </header>
 
 <section class="hero">
-  <h2>Professional Appliance Repair in South Florida</h2>
+  <!-- Strong visual image (technician at work) -->
+  <img src="https://images.pexels.com/photos/8979791/pexels-photo-8979791.jpeg" alt="Appliance repair technician at work"> 
+  <h2>Fast, Trusted & Professional Appliance Repair</h2>
   <p>Same-Day Service • Experienced Technicians • Satisfaction Guaranteed</p>
 </section>
 
 <section>
-  <h2 class="section-title">Our Appliance Repair Services</h2>
-  <div class="services-grid">
-    <div class="service-box">Refrigerator Repair</div>
-    <div class="service-box">Washer & Dryer Repair</div>
-    <div class="service-box">Oven & Stove Repair</div>
-    <div class="service-box">Dishwasher Repair</div>
-    <div class="service-box">Microwave Repair</div>
-    <div class="service-box">Ice Maker Repair</div>
+  <h2 class="section-title">Repair Work Gallery</h2>
+  <div class="photo-grid">
+    <img src="https://images.pexels.com/photos/4473784/pexels-photo-4473784.jpeg" alt="Repairing refrigerator">
+    <img src="https://images.pexels.com/photos/732243/pexels-photo-732243.jpeg" alt="Technician repairing washing machine">
+    <img src="https://images.pexels.com/photos/805241/pexels-photo-805241.jpeg" alt="Dishwasher repair">
+    <img src="https://images.pexels.com/photos/4492135/pexels-photo-4492135.jpeg" alt="Oven tech at work">
   </div>
 </section>
 
-<section class="why">
-  <h2 class="section-title">Why Choose Us</h2>
-  <ul>
-    <li>✔ Same-Day & Emergency Service</li>
-    <li>✔ Licensed & Experienced Technicians</li>
-    <li>✔ Upfront Pricing – No Surprises</li>
-    <li>✔ Warranty on Repairs</li>
-    <li>✔ Locally Owned & Operated</li>
-    <li>✔ Trusted Across South Florida</li>
-  </ul>
-</section>
-
 <section>
-  <h2 class="section-title">Brands We Repair</h2>
-  <div class="brands">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b7/Samsung_Black_icon.svg">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/LG_logo_2023.svg">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/General_Electric_logo.svg">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Whirlpool_logo.svg">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Bosch-logo.svg">
+  <h2 class="section-title">Our Services</h2>
+  <div class="services">
+    <div>Refrigerator Repair</div>
+    <div>Washer & Dryer Repair</div>
+    <div>Oven & Stove Repair</div>
+    <div>Dishwasher Repair</div>
+    <div>Microwave Repair</div>
+    <div>Ice Maker Repair</div>
   </div>
 </section>
 
@@ -265,30 +181,25 @@ footer {
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="tel" name="phone" placeholder="Phone Number" required>
       <input type="text" name="zip" placeholder="Zip Code" required>
-
       <select name="appliance" required>
         <option value="">Select Appliance</option>
         <option>Refrigerator</option>
-        <option>Washer</option>
-        <option>Dryer</option>
+        <option>Washer / Dryer</option>
         <option>Oven / Stove</option>
         <option>Dishwasher</option>
         <option>Microwave</option>
       </select>
-
       <textarea name="problem" placeholder="Describe the issue"></textarea>
-      <button type="submit">Book Now</button>
+      <button type="submit">Submit Booking</button>
     </form>
   </div>
 </section>
 
 <footer>
-  <p>📞 (248) 248-3361 | 📧 jsrastarepair@gmail.com</p>
-  <p>Mon – Sat | 8am – 8pm</p>
-  <p>© 2025 J’s Rasta Appliance Repair</p>
+  <p>📞 (954) 548-9364 • jsrastarepair@gmail.com</p>
+  <p>Serving South Florida with Reliable Appliance Repair</p>
+  <p>&copy; 2025 J’s Rasta Appliance Repair</p>
 </footer>
-
-<a href="tel:+12482483361" class="floating-call">📞 Call Now</a>
 
 </body>
 </html>
