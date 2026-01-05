@@ -159,15 +159,21 @@ body {
 }
 
 #applianceBookingForm button {
-    background: var(--accent);
-    color: white;
+    background: var(--accent); /* Use the accent color you defined */
+    color: white; /* White text color */
     padding: 0.9rem;
     border: none;
     font-weight: bold;
     border-radius: var(--border-radius);
     cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional: adds a small shadow to make it stand out */
+    transition: background-color 0.3s ease; /* Optional: adds a smooth hover transition */
 }
 
+    #applianceBookingForm button:hover {
+    background: #0056b3; /* Darker shade of the accent color for hover effect */
+}
+        
 #bookingTimeFieldset {
     border: 1px solid #444;
     border-radius: var(--border-radius);
