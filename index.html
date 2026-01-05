@@ -18,185 +18,175 @@
 
     
     <style>
-         <!-- GLOBAL STYLES -->
-        :root {
-            --bg-dark: #1c1f2b;
-            --accent: #3f8cff;
-            --text-light: #f5faff;
-            --text-muted: #aaa;
-            --input-bg: #2a2f40;
-            --border-radius: 10px;
-        }
+        /* Global Styles */
+:root {
+    --bg-dark: #1c1f2b;
+    --accent: #3f8cff;
+    --text-light: #f5faff;
+    --text-muted: #aaa;
+    --input-bg: #2a2f40;
+    --border-radius: 10px;
+}
 
-       body
-        {
-   
-            margin: 0;
-  
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   
-            color: black; /* Change text color to black */
-    
-            background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black; /* Change text color to black */
+    background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+}
 
-            
-        }
+/* Header & Navigation */
+.rasta-repair-header {
+    background: linear-gradient(90deg, #ff0000, #ffff00, #00cc00);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    color: black;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
 
-        /* --- HEADER & NAVIGATION --- */
-        .rasta-repair-header {
-            background: linear-gradient(90deg, #ff0000, #ffff00, #00cc00);
-            text-align: center;
-            padding: 1.5rem 1rem;
-            color: black;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-        }
+.rasta-repair-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
 
-        .rasta-repair-header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
+.rasta-repair-nav {
+    background: #222;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0.75rem;
+}
 
-        .rasta-repair-nav {
-            background: #222;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            padding: 0.75rem;
-        }
+.rasta-repair-nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0.5rem 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
 
-        .rasta-repair-nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0.5rem 1.2rem;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
+.rasta-repair-nav a:hover {
+    color: #00cc00;
+}
 
-        .rasta-repair-nav a:hover {
-            color: #00cc00;
-        }
+/* Center the text in your header, sections, and content boxes */
+.rasta-repair-header, .rasta-repair-section, .rasta-repair-box, .rasta-repair-hero, h2, h3, p, ul {
+    text-align: center;
+}
 
-        /* Center the text in your header, sections, and content boxes */
-    .rasta-repair-header, .rasta-repair-section, .rasta-repair-box, .rasta-repair-hero
-        {
-        text-align: center;
-        }
+/* Hero Section */
+.rasta-repair-hero {
+    padding: 3rem 1rem;
+    background: url('https://images.unsplash.com/photo-1581090463770-52641eae0b43?fit=crop&w=1600&q=80') no-repeat center;
+    background-size: cover;
+    color: white;
+}
 
-        
-        /* --- HERO SECTION --- */
-        .rasta-repair-hero {
-            text-align: center;
-            padding: 3rem 1rem;
-            background: url('https://images.unsplash.com/photo-1581090463770-52641eae0b43?fit=crop&w=1600&q=80') no-repeat center;
-            background-size: cover;
-            color: white;
-        }
+.rasta-repair-hero h2 {
+    font-size: 2.2rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+}
 
-        .rasta-repair-hero h2 {
-            font-size: 2.2rem;
-            background-color: rgba(0, 0, 0, 0.6);
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            border-radius: 10px;
-        }
+/* Content Boxes */
+.rasta-repair-section {
+    padding: 2rem 1rem;
+    max-width: 1000px;
+    margin: auto;
+}
 
-        /* --- CONTENT BOXES --- */
-        .rasta-repair-section {
-            padding: 2rem 1rem;
-            max-width: 1000px;
-            margin: auto;
-        }
+.rasta-repair-box {
+    background: #eaf4ff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
 
-        .rasta-repair-box {
-            background: #eaf4ff;
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-top: 1.5rem;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-        }
+.rasta-repair-box h3 {
+    color: ##000;
+    margin-bottom: 1rem;
+}
 
-        .rasta-repair-box h3 {
-            color: ##000;
-            margin-bottom: 1rem;
-        }
+/* Brand Logos */
+.rasta-repair-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem 0;
+}
 
-        /* --- BRAND LOGOS --- */
-        .rasta-repair-logos {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-            padding: 1rem 0;
-        }
+.rasta-repair-logos img {
+    max-width: 100px;
+    height: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+}
 
-        .rasta-repair-logos img {
-            max-width: 100px;
-            height: auto;
-            transition: transform 0.3s ease, filter 0.3s ease;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
-        }
+.rasta-repair-logos img:hover {
+    transform: scale(1.1);
+}
 
-        .rasta-repair-logos img:hover {
-            transform: scale(1.1);
-        }
+/* Booking Form Styles */
+#applianceBookingSection {
+    background: var(--bg-dark);
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
 
-        /* --- BOOKING FORM STYLES --- */
-        #applianceBookingSection {
-            background: var(--bg-dark);
-            color: var(--text-light);
-            max-width: 600px;
-            margin: 2rem auto;
-            padding: 2rem;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-        }
+#applianceBookingForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 
-        #applianceBookingForm {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
+#applianceBookingForm input,
+#applianceBookingForm select,
+#applianceBookingForm textarea {
+    background: var(--input-bg);
+    border: 1px solid #444;
+    padding: 0.75rem;
+    font-size: 1rem;
+    color: var(--text-light);
+    border-radius: var(--border-radius);
+}
 
-        #applianceBookingForm input,
-        #applianceBookingForm select,
-        #applianceBookingForm textarea {
-            background: var(--input-bg);
-            border: 1px solid #444;
-            padding: 0.75rem;
-            font-size: 1rem;
-            color: var(--text-light);
-            border-radius: var(--border-radius);
-        }
+#applianceBookingForm button {
+    background: var(--accent);
+    color: white;
+    padding: 0.9rem;
+    border: none;
+    font-weight: bold;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
 
-        #applianceBookingForm button {
-            background: var(--accent);
-            color: white;
-            padding: 0.9rem;
-            border: none;
-            font-weight: bold;
-            border-radius: var(--border-radius);
-            cursor: pointer;
-        }
+#bookingTimeFieldset {
+    border: 1px solid #444;
+    border-radius: var(--border-radius);
+    padding: 1rem;
+}
 
-        #bookingTimeFieldset {
-            border: 1px solid #444;
-            border-radius: var(--border-radius);
-            padding: 1rem;
-        }
+#bookingConfirmationMsg {
+    margin-top: 1rem;
+    display: none;
+    color: #98ffb3;
+    text-align: center;
+}
 
-        #bookingConfirmationMsg {
-            margin-top: 1rem;
-            display: none;
-            color: #98ffb3;
-            text-align: center;
-        }
-
-        /* --- RESPONSIVE DESIGN --- */
-        @media (max-width: 600px) {
-            .rasta-repair-header h1 { font-size: 2rem; }
-            .rasta-repair-hero h2 { font-size: 1.5rem; }
-            #applianceBookingSection { margin: 1rem; padding: 1rem; }
-        }
+/* Responsive Design */
+@media (max-width: 600px) {
+    .rasta-repair-header h1 { font-size: 2rem; }
+    .rasta-repair-hero h2 { font-size: 1.5rem; }
+    #applianceBookingSection { margin: 1rem; padding: 1rem; }
+}
     </style>
 </head>
 <body>
