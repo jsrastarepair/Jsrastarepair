@@ -16,6 +16,28 @@
 
     <link rel="icon" href="favicon.ico">
 
+
+
+
+    <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+
+<style>
+.swiper {
+  max-width: 600px;   /* Limit size */
+  margin: 20px auto;  /* Center the slider */
+}
+
+.swiper-slide img {
+  width: 100%;        /* Image fits slider */
+  height: auto;
+  border-radius: 10px;
+}
+</style>
+
+
+
+
     
     <style>
 
@@ -228,6 +250,44 @@ body {
             </ul>
         </div>
 
+     <section>
+
+        <!-- Gallery Section -->
+
+          
+<h2 style="text-align:center;">Our Work Gallery</h2>
+
+<!-- Swiper -->
+<div class="swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="images/repair1.jpg" alt="Appliance repair 1"></div>
+    <div class="swiper-slide"><img src="images/repair2.jpg" alt="Appliance repair 2"></div>
+    <div class="swiper-slide"><img src="images/repair3.jpg" alt="Appliance repair 3"></div>
+  </div>
+  
+  <!-- Pagination dots -->
+  <div class="swiper-pagination"></div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<script>
+const swiper = new Swiper('.swiper', {
+  loop: true,                     // Loop slides infinitely
+  pagination: { el: '.swiper-pagination', clickable: true },
+  autoplay: { delay: 3000 },      // Change image every 3 seconds
+});
+</script>
+
+
+         
+
+      </section>
+
+
+        
+
         <div class="rasta-repair-box">
             <h3>Brands We Service</h3>
             <div class="rasta-repair-logos">
@@ -302,17 +362,6 @@ body {
     </section>
 
 
-    <section class="rasta-repair-gallery" id="rasta-gallery">
-        
-  <!-- Gallery Section -->
-  <h2 style="text-align:center;">Our Work Gallery</h2>
-  <div class="gallery">
-    <img src="IMG_0988.jpeg" alt="Appliance repair 1">
-     
-  </div>
-
-
-    </section>
 
 
     
