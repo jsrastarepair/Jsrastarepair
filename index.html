@@ -19,19 +19,20 @@
 
     <style>
     :root {
-        --primary-color: #00cc00;
-        --secondary-color: #ffcc00;
-        --danger-color: #ff0000;
-        --dark-bg: #1e1e24;
-        --light-bg: #f4f6f9;
-        --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        --primary-color: #2e7d32;     /* Grounded, premium Rasta Green */
+        --secondary-color: #fbc02d;   /* Warm, clear Rasta Gold */
+        --danger-color: #d32f2f;      /* Deep Rasta Red */
+        --dark-bg: #1e2124;
+        --light-bg: #f8fafc;
+        --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
         --border-radius: 16px;
+        --text-main: #334155;
     }
 
     body {
         margin: 0;
         font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        color: #2d3748;
+        color: var(--text-main);
         background-color: var(--light-bg);
         -webkit-font-smoothing: antialiased;
     }
@@ -40,46 +41,47 @@
     .rasta-repair-header {
         background: linear-gradient(90deg, var(--danger-color), var(--secondary-color), var(--primary-color));
         text-align: center;
-        padding: 3rem 1rem;
-        color: #000;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        padding: 3.5rem 1rem;
+        color: #fff;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     }
 
     .rasta-repair-header h1 {
         margin: 0;
         font-size: 3.5rem;
         font-weight: 900;
-        letter-spacing: -1px;
+        letter-spacing: -0.5px;
         text-transform: uppercase;
-        text-shadow: 1px 1px 0px rgba(255,255,255,0.4);
+        text-shadow: 0 2px 4px rgba(0,0,0,0.25);
     }
 
     .rasta-repair-header p {
         font-size: 1.3rem;
         font-weight: 600;
         margin: 0.5rem 0 0 0;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.2);
     }
 
     .call-btn {
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        margin-top: 20px;
+        margin-top: 24px;
         font-size: 1.15rem;
         font-weight: 700;
         color: #fff;
-        background-color: #1a73e8;
-        padding: 12px 28px;
+        background-color: #0284c7;
+        padding: 14px 32px;
         border-radius: 50px;
         text-decoration: none;
-        box-shadow: 0 4px 15px rgba(26, 115, 232, 0.35);
+        box-shadow: 0 4px 15px rgba(2, 132, 199, 0.3);
         transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s;
     }
 
     .call-btn:hover {
         transform: translateY(-2px);
-        background-color: #155cb8;
-        box-shadow: 0 6px 20px rgba(26, 115, 232, 0.45);
+        background-color: #0369a1;
+        box-shadow: 0 6px 20px rgba(2, 132, 199, 0.45);
     }
 
     .rasta-repair-nav {
@@ -87,14 +89,14 @@
         display: flex;
         justify-content: center;
         gap: 5px;
-        padding: 1rem;
+        padding: 0.75rem;
         position: sticky;
         top: 0;
         z-index: 999;
     }
 
     .rasta-repair-nav a {
-        color: #fff;
+        color: #e2e8f0;
         text-decoration: none;
         padding: 10px 20px;
         font-weight: 600;
@@ -114,8 +116,7 @@
         font-weight: 800;
         text-align: center;
         margin: 4rem 0 2rem 0;
-        color: #1a202c;
-        position: relative;
+        color: #0f172a;
     }
 
     /* SIDE-BY-SIDE GALLERY & REVIEWS LAYOUT */
@@ -132,17 +133,18 @@
         flex: 1;
         width: 100%;
         max-width: 600px;
-        background: #fff;
+        background: #0f172a; /* Dark presentation background so full image shines */
         border-radius: var(--border-radius);
         box-shadow: var(--card-shadow);
         overflow: hidden;
         margin: 0;
     }
 
+    /* FIXED IMAGE CRIPPING ISSUE HERE */
     .swiper-slide img {
         width: 100%;
         height: 500px;
-        object-fit: cover;
+        object-fit: contain; /* Prevents stretching and cropping */
         display: block;
     }
 
@@ -160,9 +162,10 @@
     .rasta-review-widget h3 {
         margin-top: 0;
         font-size: 1.75rem;
-        color: #1a202c;
+        color: #0f172a;
         text-align: center;
         margin-bottom: 1.5rem;
+        font-weight: 700;
     }
 
     .review-placeholder {
@@ -196,7 +199,7 @@
 
     .rasta-repair-box h3 {
         font-size: 1.75rem;
-        color: #1a202c;
+        color: #0f172a;
         margin-top: 0;
         margin-bottom: 2rem;
         text-align: center;
@@ -247,19 +250,20 @@
         transform: scale(1.1);
     }
 
-    /* Booking Form Premium Setup */
+    /* FIXED BOOKING FORM BEAUTIFICATION HERE */
     #applianceBookingSection {
-        background: var(--dark-bg);
-        color: #fff;
-        max-width: 650px;
+        background: #ffffff;
+        color: #1e293b;
+        max-width: 600px;
         margin: 4rem auto;
-        padding: 3.5rem 2.5rem;
+        padding: 3rem 2.5rem;
         border-radius: var(--border-radius);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+        border: 1px solid #e2e8f0;
     }
 
     #applianceBookingSection h2 {
-        color: #fff;
+        color: #0f172a;
         text-align: center;
         font-size: 2.2rem;
         font-weight: 800;
@@ -276,11 +280,11 @@
     #applianceBookingForm input,
     #applianceBookingForm select,
     #applianceBookingForm textarea {
-        background: #2a2a35;
-        border: 1px solid #444;
+        background: #f8fafc;
+        border: 1px solid #cbd5e1;
         padding: 1rem;
         font-size: 1rem;
-        color: #fff;
+        color: #1e293b;
         border-radius: 10px;
         outline: none;
         transition: border-color 0.2s, background-color 0.2s;
@@ -292,45 +296,47 @@
     #applianceBookingForm select:focus,
     #applianceBookingForm textarea:focus {
         border-color: var(--primary-color);
-        background: #32323f;
+        background: #ffffff;
+        box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
     }
 
     #applianceBookingForm button {
         background: var(--primary-color);
-        color: #000;
+        color: #ffffff;
         padding: 1.1rem;
         border: none;
         font-size: 1.1rem;
         font-weight: 700;
         border-radius: 10px;
         cursor: pointer;
-        box-shadow: 0 4px 12px rgba(0, 204, 0, 0.2);
+        box-shadow: 0 4px 12px rgba(46, 125, 50, 0.2);
         transition: background-color 0.2s, transform 0.1s;
     }
 
     #applianceBookingForm button:hover {
-        background: #00ff00;
+        background: #1b5e20;
         transform: translateY(-1px);
     }
 
     #bookingTimeFieldset {
-        border: 1px solid #444;
+        border: 1px solid #e2e8f0;
         border-radius: 10px;
         padding: 1.5rem;
         display: flex;
         flex-direction: column;
         gap: 12px;
+        background: #f8fafc;
     }
 
     #bookingTimeFieldset legend {
         font-weight: 700;
         padding: 0 10px;
-        color: var(--secondary-color);
+        color: var(--primary-color);
     }
 
     #bookingTimeFieldset label {
         font-size: 0.9rem;
-        color: #cbd5e0;
+        color: #64748b;
         margin-bottom: -4px;
         text-align: left;
     }
@@ -338,7 +344,7 @@
     #bookingConfirmationMsg {
         margin-top: 1.25rem;
         display: none;
-        color: #98ffb3;
+        color: var(--primary-color);
         text-align: center;
         font-weight: 700;
         font-size: 1.1rem;
@@ -361,13 +367,13 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        border: 1px solid rgba(0,0,0,0.02);
+        border: 1px solid rgba(0,0,0,0.01);
         transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .repair-grid-logos .logo-card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+        box-shadow: 0 12px 25px rgba(0,0,0,0.08);
     }
 
     .repair-grid-logos img {
@@ -571,7 +577,7 @@
                     <input type="time" name="time" id="bookingTime" required />
                 </fieldset>
 
-                <button type="submit">Book Now</button>
+                <button type="submit">Submit Request</button>
             </form>
             <div id="bookingConfirmationMsg">✅ Thank you! Your booking has been submitted.</div>
         </div>
