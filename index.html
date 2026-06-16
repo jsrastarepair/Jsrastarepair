@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>J's Rasta Repair</title>
-       
+        
     <!-- Google Verification -->
  
     <meta name="google-site-verification" content="Or5_Vx9kwk54B0SasOJ10wuZbywHgE45uYVV_YpuVj0" />
@@ -17,194 +17,231 @@
     <link rel="icon" href="favicon.ico">
 
     <!-- Swiper CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
 
-<style>
-.swiper {
-  max-width: 600px;   /* Limit size */
-  margin: 20px auto;  /* Center the slider */
-}
+    <style>
+    /* SIDE-BY-SIDE GALLERY & REVIEWS LAYOUT */
+    .gallery-reviews-container {
+        display: flex;
+        gap: 30px;
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 0 15px;
+        align-items: stretch; /* Makes both boxes equal height */
+    }
 
-.swiper-slide img {
-  width: 100%;        /* Image fits slider */
-  height: auto;
-  border-radius: 10px;
-}
+    .swiper {
+        flex: 1;
+        width: 100%;
+        max-width: 600px;   /* Limit size */
+        margin: 0;          /* Reset auto margin to work with flex box */
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+    }
 
-</style>
+    .swiper-slide img {
+        width: 100%;        /* Image fits slider */
+        height: 450px;      /* Set a fixed height for consistency */
+        object-fit: cover;  /* Crops image cleanly without stretching */
+        display: block;
+    }
 
+    /* Review Widget Container Styling */
+    .rasta-review-widget {
+        flex: 1;
+        max-width: 600px;
+        background: #fff;
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
+    .review-placeholder {
+        border: 2px dashed #ccc;
+        padding: 30px;
+        border-radius: 8px;
+        background: #fafafa;
+    }
 
-
+    /* Mobile Responsive Shift */
+    @media (max-width: 768px) {
+        .gallery-reviews-container {
+            flex-direction: column;
+            align-items: center;
+        }
+        .swiper, .rasta-review-widget {
+            max-width: 100%;
+        }
+        .swiper-slide img {
+            height: auto; /* Allow natural scaling on mobile screens */
+        }
+    }
+    </style>
     
     <style>
-
-body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: black; /* Text color remains black */
-    background-color: #f2f2f2; /* Light gray background */
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: black; /* Text color remains black */
+        background-color: #f2f2f2; /* Light gray background */
     }
-  
+      
+    /* Header & Navigation */
+    .rasta-repair-header {
+        background: linear-gradient(90deg, #ff0000, #ffff00, #00cc00);
+        text-align: center;
+        padding: 1.5rem 1rem;
+        color: black;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
 
-/* Header & Navigation */
-.rasta-repair-header {
-    background: linear-gradient(90deg, #ff0000, #ffff00, #00cc00);
-    text-align: center;
-    padding: 1.5rem 1rem;
-    color: black;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-}
+    .rasta-repair-header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+    }
 
-.rasta-repair-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
+    .rasta-repair-nav {
+        background: #222;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0.75rem;
+    }
 
-.rasta-repair-nav {
-    background: #222;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 0.75rem;
-}
+    .rasta-repair-nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0.5rem 1.2rem;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
 
-.rasta-repair-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0.5rem 1.2rem;
-    font-weight: bold;
-    transition: color 0.3s;
-}
+    .rasta-repair-nav a:hover {
+        color: #00cc00;
+    }
 
-.rasta-repair-nav a:hover {
-    color: #00cc00;
-}
+    /* Center the text in your header, sections, and content boxes */
+    .rasta-repair-header, .rasta-repair-section, .rasta-repair-box, .rasta-repair-hero, h2, h3, p, ul {
+        text-align: center;
+    }
 
-/* Center the text in your header, sections, and content boxes */
-.rasta-repair-header, .rasta-repair-section, .rasta-repair-box, .rasta-repair-hero, h2, h3, p, ul {
-    text-align: center;
-}
+    /* Hero Section */
+    .rasta-repair-hero {
+        padding: 3rem 1rem;
+        background: url('https://images.unsplash.com/photo-1581090463770-52641eae0b43?fit=crop&w=1600&q=80') no-repeat center;
+        background-size: cover;
+        color: white;
+    }
 
-/* Hero Section */
-.rasta-repair-hero {
-    padding: 3rem 1rem;
-    background: url('https://images.unsplash.com/photo-1581090463770-52641eae0b43?fit=crop&w=1600&q=80') no-repeat center;
-    background-size: cover;
-    color: white;
-}
+    .rasta-repair-hero h2 {
+        font-size: 2.2rem;
+        background-color: rgba(0, 0, 0, 0.6);
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        border-radius: 10px;
+    }
 
-.rasta-repair-hero h2 {
-    font-size: 2.2rem;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: inline-block;
-    padding: 0.75rem 1.5rem;
-    border-radius: 10px;
-}
+    /* Content Boxes */
+    .rasta-repair-section {
+        padding: 2rem 1rem;
+        max-width: 1000px;
+        margin: auto;
+    }
 
-/* Content Boxes */
-.rasta-repair-section {
-    padding: 2rem 1rem;
-    max-width: 1000px;
-    margin: auto;
-}
+    .rasta-repair-box {
+        background: #eaf4ff;
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin-top: 1.5rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
 
-.rasta-repair-box {
-    background: #eaf4ff;
-    border-radius: 12px;
-    padding: 1.5rem;
-    margin-top: 1.5rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
+    .rasta-repair-box h3 {
+        color: #000;
+        margin-bottom: 1rem;
+    }
 
-.rasta-repair-box h3 {
-    color: ##000;
-    margin-bottom: 1rem;
-}
+    /* Brand Logos */
+    .rasta-repair-logos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem 0;
+    }
 
-/* Brand Logos */
-.rasta-repair-logos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    padding: 1rem 0;
-}
+    .rasta-repair-logos img {
+        max-width: 100px;
+        height: auto;
+        transition: transform 0.3s ease, filter 0.3s ease;
+        filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+    }
 
-.rasta-repair-logos img {
-    max-width: 100px;
-    height: auto;
-    transition: transform 0.3s ease, filter 0.3s ease;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
-}
+    .rasta-repair-logos img:hover {
+        transform: scale(1.1);
+    }
 
-.rasta-repair-logos img:hover {
-    transform: scale(1.1);
-}
+    /* Booking Form Styles */
+    #applianceBookingSection {
+        background: var(--bg-dark);
+        color: var(--text-light);
+        max-width: 600px;
+        margin: 2rem auto;
+        padding: 2rem;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
 
-/* Booking Form Styles */
+    #applianceBookingForm {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
 
+    #applianceBookingForm input,
+    #applianceBookingForm select,
+    #applianceBookingForm textarea {
+        background: var(--input-bg);
+        border: 1px solid #444;
+        padding: 0.75rem;
+        font-size: 1rem;
+        color: var(--text-light);
+        border-radius: var(--border-radius);
+    }
 
-        
-#applianceBookingSection {
-    background: var(--bg-dark);
-    color: var(--text-light);
-    max-width: 600px;
-    margin: 2rem auto;
-    padding: 2rem;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-}
+    #applianceBookingForm button {
+        background: var(--accent); /* Accent color for the button */
+        color: Black; /* White text on button */
+        padding: 0.9rem;
+        border: none;
+        font-weight: bold;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional: adds a small shadow to make it stand out */
+        transition: background-color 0.3s ease;
+    }
 
-#applianceBookingForm {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
+    #applianceBookingForm button:hover {
+        background: #0056b3; /* Darker shade for hover effect */
+    }
 
-#applianceBookingForm input,
-#applianceBookingForm select,
-#applianceBookingForm textarea {
-    background: var(--input-bg);
-    border: 1px solid #444;
-    padding: 0.75rem;
-    font-size: 1rem;
-    color: var(--text-light);
-    border-radius: var(--border-radius);
-}
+    #bookingTimeFieldset {
+        border: 1px solid #444;
+        border-radius: var(--border-radius);
+        padding: 1rem;
+    }
 
-#applianceBookingForm button {
-    background: var(--accent); /* Accent color for the button */
-    color: Black; /* White text on button */
-    padding: 0.9rem;
-    border: none;
-    font-weight: bold;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional: adds a small shadow to make it stand out */
-    transition: background-color 0.3s ease;
-}
-
-#applianceBookingForm button:hover {
-    background: #0056b3; /* Darker shade for hover effect */
-}
-
-#bookingTimeFieldset {
-    border: 1px solid #444;
-    border-radius: var(--border-radius);
-    padding: 1rem;
-}
-
-#bookingConfirmationMsg {
-    margin-top: 1rem;
-    display: none;
-    color: #98ffb3;
-    text-align: center;
-}
-
-
-
-        
+    #bookingConfirmationMsg {
+        margin-top: 1rem;
+        display: none;
+        color: #98ffb3;
+        text-align: center;
+    }
     </style>
 </head>
 <body>
@@ -213,18 +250,18 @@ body {
         <h1>J's Rasta Repair</h1>
         <p>Reliable Appliance Repair in South Florida ☀️</p>
 
-<a href="tel:+19545489364"
-   style="
-     display:inline-block;
-     margin-top:6px;
-     font-size:20px;
-     font-weight:bold;
-     color:#1a73e8;
-     text-decoration:none;">
-  📞 Call Now: (954) 548-9364
-</a>
-
+        <a href="tel:+19545489364"
+           style="
+             display:inline-block;
+             margin-top:6px;
+             font-size:20px;
+             font-weight:bold;
+             color:#1a73e8;
+             text-decoration:none;">
+          📞 Call Now: (954) 548-9364
+        </a>
     </header>
+
     <nav class="rasta-repair-nav">
         <a href="#rasta-services">Our Services</a>
         <a href="#rasta-booking">Booking</a>
@@ -232,45 +269,57 @@ body {
         <a href="#rasta-contact">Contact Us</a>
     </nav>
 
+    <!-- Side-by-Side Section (Gallery & Reviews) -->
+    <section>
+        <h2 style="text-align:center; margin-top: 2rem; margin-bottom: 0;">Our Work & Customer Reviews</h2>
+        
+        <div class="gallery-reviews-container">
+            
+            <!-- Swiper Slider Box -->
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="IMG_0988.jpeg" alt="Appliance repair 1"></div>
+                    <div class="swiper-slide"><img src="IMG_1388.jpeg" alt="Appliance repair 2"></div>
+                    <div class="swiper-slide"><img src="78889882598__A7584AF9-188D-4710-944E-0AE40C189BA4.jpeg" alt="Appliance repair 3"></div>
+                    <div class="swiper-slide"><img src="76411056445__6F975BBE-C03E-4537-AC1B-EC719A44D691.jpeg" alt="Appliance repair 4"></div>
+                    <div class="swiper-slide"><img src="75260480637__552FFC13-C64B-4756-98DB-568781458F5E.jpeg" alt="Appliance repair 6"></div>
+                    <div class="swiper-slide"><img src="IMG_1882.jpeg" alt="Appliance repair 7"></div>
+                    <div class="swiper-slide"><img src="IMG_3005.jpeg" alt="Appliance repair 8"></div>
+                    <div class="swiper-slide"><img src="IMG_0467.jpeg" alt="Appliance repair 9"></div>
+                    <div class="swiper-slide"><img src="76902607209__B129E863-5A50-456E-BC3E-05F39501911F.jpeg" alt="Appliance repair 10"></div>
+                    <div class="swiper-slide"><img src="73255258806__40F9E73E-08BC-43E8-A7B6-8902C6C0610D.jpeg" alt="Appliance repair 11"></div>
+                    <div class="swiper-slide"><img src="78778636348__880D7FE0-88A6-4D4A-9711-9C2D094FFF6E.jpeg" alt="Appliance repair 12"></div>
+                    <div class="swiper-slide"><img src="IMG_0159.jpeg" alt="Appliance repair 13"></div>
+                </div>
+                <!-- Pagination dots -->
+                <div class="swiper-pagination"></div>
+            </div>
 
-     <section>
+            <!-- Review Widget Box -->
+            <div class="rasta-review-widget">
+                <h3>What Our Customers Say</h3>
+                <div class="review-placeholder">
+                    <!-- PASTE YOUR GOOGLE/YELP REVIEW EMBED CODE OR IFRAME RIGHT BELOW HERE -->
+                    <p style="font-size: 24px; margin: 0 0 10px 0;">⭐⭐⭐⭐⭐</p>
+                    <p style="font-style: italic; font-size: 16px; color: #333;">"J came out the same day and got our refrigerator cooling again fast. Very professional and highly recommended!"</p>
+                    <p style="font-weight: bold; margin-top: 15px; color: #00cc00;">- Satisfied Customer, South Florida</p>
+                    <!-- END OF EMBED CODE -->
+                </div>
+            </div>
 
-        <!-- Gallery Section -->
+        </div>
+    </section>
 
-          
-<h2 style="text-align:center;">Our Work Gallery</h2>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
-<!-- Swiper -->
-<div class="swiper">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide"><img src="IMG_0988.jpeg" alt="Appliance repair 1"></div>
-    <div class="swiper-slide"><img src="IMG_1388.jpeg" alt="Appliance repair 2"></div>
-    <div class="swiper-slide"><img src="78889882598__A7584AF9-188D-4710-944E-0AE40C189BA4.jpeg" alt="Appliance repair 3"></div>
-    <div class="swiper-slide"><img src="76411056445__6F975BBE-C03E-4537-AC1B-EC719A44D691.jpeg" alt="Appliance repair 4"></div>
-    <div class="swiper-slide"><img src="75260480637__552FFC13-C64B-4756-98DB-568781458F5E.jpeg" alt="Appliance repair 6"></div>
-    <div class="swiper-slide"><img src="IMG_1882.jpeg" alt="Appliance repair 7"></div>
-    <div class="swiper-slide"><img src="IMG_3005.jpeg" alt="Appliance repair 8"></div>
-    <div class="swiper-slide"><img src="IMG_0467.jpeg" alt="Appliance repair 9"></div>
-    <div class="swiper-slide"><img src="76902607209__B129E863-5A50-456E-BC3E-05F39501911F.jpeg" alt="Appliance repair 10"></div>
-    <div class="swiper-slide"><img src="73255258806__40F9E73E-08BC-43E8-A7B6-8902C6C0610D.jpeg" alt="Appliance repair 11"></div>
-    <div class="swiper-slide"><img src="78778636348__880D7FE0-88A6-4D4A-9711-9C2D094FFF6E.jpeg" alt="Appliance repair 12"></div>
-    <div class="swiper-slide"><img src="IMG_0159.jpeg" alt="Appliance repair 13"></div>
- 
-  
-  <!-- Pagination dots -->
-  <div class="swiper-pagination"></div>
-</div>
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
-<script>
-const swiper = new Swiper('.swiper', {
-  loop: true,                     // Loop slides infinitely
-  pagination: { el: '.swiper-pagination', clickable: true },
-  autoplay: { delay: 3000 },      // Change image every 3 seconds});
-</script>
-      </section>
-
+    <script>
+    const swiper = new Swiper('.swiper', {
+        loop: true,                     // Loop slides infinitely
+        pagination: { el: '.swiper-pagination', clickable: true },
+        autoplay: { delay: 3000 }       // Fixed the syntax error comment here!
+    });
+    </script>
     
     <main class="rasta-repair-section" id="rasta-services">
         <div class="rasta-repair-box">
@@ -287,7 +336,6 @@ const swiper = new Swiper('.swiper', {
             </ul>
         </div>
         
-
         <div class="rasta-repair-box">
             <h3>Brands We Service</h3>
             <div class="rasta-repair-logos">
@@ -354,7 +402,7 @@ const swiper = new Swiper('.swiper', {
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSR-WEFzu7H1ckw0rl6bOxLk5Q4niLI3defc8q36uyBg&s=10" alt="Ice Maker" />
             <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQf48mxJwKRembQGM2QqIaQJGk7Xq9G3e0TI6wUWqU-mNSFrSZlS5xJ5ZICbkE2YnJHj-DSzZNP-9cUDhxeD_JglhjED-VKnwJR2_NgCqBw&usqp=CAc" alt="Range Hood" />
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxQNCuJb-5HX6Qh6T_hbHXXqSaDGkLbBc40A&s" alt="Garbage Disposal" />
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDmhmS_2TMD2KTDdTxk7RCVhNDnQ7JcEztLgXusCmyww&s=10" alt="Washer" />
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDmhmS_2TMDKuhBP3TNDpXaGusXmgc2UpCFXpEdeFxfd&s=10" alt="Washer" />
             <img src="https://images.thdstatic.com/productImages/1c44771c-b6c5-4e63-b980-7681d374dfc0/svn/white-ge-electric-dryers-gtx38easwws-64_1000.jpg" alt="Dryer" />
             <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcS8fapYceZokUm7l_0naOnaAe4N7awhI79WzMZ94bWzY_3IJB4YtqeFlr_yb39nBKHFXfsMLNt4yvSMhNfPrTQ9ur0kg5oqDcF5tOS8DT9RVlIF_ag_WYQxKQ" alt="HeatPump"/>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROGnvJxUCKKkZEW95OH9n2n-fe_N_4GJTSHcn6v247Og&s=10" alt="CAMERA"/>
@@ -374,7 +422,6 @@ const swiper = new Swiper('.swiper', {
     <footer style="background: #111; text-align: center; padding: 1.5rem; color: #ccc; margin-top: 2rem;">
         &copy; 2026 J's Rasta Repair
     </footer>
-
 
     <script>
         (function () {
@@ -416,43 +463,42 @@ const swiper = new Swiper('.swiper', {
         })();
     </script>
 
-
-<script>
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "J's Rasta Repair",
-  "description": "Reliable appliance repair services in Broward County, Florida. Specializing in washer, dryer, refrigerator, oven, HVAC, and appliance diagnostics.",
-  "url": "https://www.jsrastarepair.com",
-  "telephone": "+12482483361",
-  "email": "jsrastarepair@gmail.com",
-  "areaServed": {
-    "@type": "AdministrativeArea",
-    "name": "Broward County, FL"
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "addressRegion": "FL",
-    "addressCountry": "US"
-  },
-  "openingHours": [
-    "Mo-Sa 08:00-20:00"
-  ],
-  "sameAs": [
-    "https://instagram.com/jsrastarepair/"
-  ],
-  "serviceType": [
-    "Appliance Repair",
-    "Washer Repair",
-    "Dryer Repair",
-    "Refrigerator Repair",
-    "Oven and Stove Repair",
-    "HVAC Repair",
-    "Security System Installation"
-  ]
-}
-</script>
-
-    
+    <script>
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "J's Rasta Repair",
+      "description": "Reliable appliance repair services in Broward County, Florida. Specializing in washer, dryer, refrigerator, oven, HVAC, and appliance diagnostics.",
+      "url": "https://www.jsrastarepair.com",
+      "telephone": "+12482483361",
+      "email": "jsrastarepair@gmail.com",
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Broward County, FL"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "FL",
+        "addressCountry": "US"
+      },
+      "openingHours": [
+        "Mo-Sa 08:00-20:00"
+      ],
+      "sameAs": [
+        "https://instagram.com/jsrastarepair/"
+      ],
+      "serviceType": [
+        "Appliance Repair",
+        "Washer Repair",
+        "Dryer Repair",
+        "Refrigerator Repair",
+        "Oven and Stove Repair",
+        "HVAC Repair",
+        "Security System Installation"
+      ]
+    }
+    </script>
 </body>
 </html>
+
+```
