@@ -125,6 +125,33 @@
         -webkit-font-smoothing: antialiased;
     }
 
+
+        /* Container to align left-logo, title, and right-logo */
+.header-branding {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Dual Logo Sizing & Drop Shadow */
+.header-logo {
+    height: 75px; /* Adjust size to fit your header height */
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.3));
+}
+
+/* Mobile responsive tweak: hides logos on very small screens so the title stays huge */
+@media (max-width: 600px) {
+    .header-logo {
+        height: 45px;
+    }
+    .header-branding {
+        gap: 10px;
+    }
+}
+        
     /* Header & Navigation */
     .rasta-repair-header {
         background: linear-gradient(90deg, var(--danger-color), var(--secondary-color), var(--primary-color));
@@ -532,13 +559,17 @@
 </head>
 <body>
 
-    <header class="rasta-repair-header">
+<header class="rasta-repair-header">
+    <div class="header-branding">
+        <img src="LogoRasta.png" alt="J's Rasta Repair Logo" class="header-logo">
         <h1>J's Rasta Repair</h1>
-        <p>Reliable Appliance Repair in South Florida ☀️</p>
-        <a href="tel:+19545489364" class="call-btn">
-           📞 Call Now: (954) 548-9364
-        </a>
-    </header>
+        <img src="LogoRasta.png" alt="J's Rasta Repair Logo" class="header-logo">
+    </div>
+    <p>Reliable Appliance Repair in South Florida ☀️</p>
+    <a href="tel:+19545489364" class="call-btn">
+       📞 Call Now: (954) 548-9364
+    </a>
+</header>
 
     <nav class="rasta-repair-nav">
         <a href="#rasta-services">Our Services</a>
