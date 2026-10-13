@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>J's Rasta Repair</title>
+    <title>Appliance Repair in Fort Lauderdale & Broward County | J's Rasta Repair</title>
+    <meta name="description" content="J's Rasta Repair provides in-home appliance repair across Fort Lauderdale and Broward County, including washer, dryer, refrigerator, oven, stove, dishwasher and ice maker service. $100 diagnostic fee applied toward repair when you proceed.">
+    <link rel="canonical" href="https://www.jsrastarepair.com/">
         
     <!-- Google Verification -->
     <meta name="google-site-verification" content="Or5_Vx9kwk54B0SasOJ10wuZbywHgE45uYVV_YpuVj0" />
@@ -12,10 +14,10 @@
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "HVACBusiness"],
+  "@type": "LocalBusiness",
   "name": "J's Rasta Repair",
   "image": "logopngrasta.png",
-  "description": "Reliable appliance repair services in Broward County, Florida. Specializing in washer, dryer, refrigerator, oven, HVAC, and appliance diagnostics.",
+  "description": "In-home appliance repair in Fort Lauderdale and Broward County, Florida. Washer, dryer, refrigerator, ice maker, oven, stove, dishwasher and microwave diagnostics and repair.",
   "url": "https://www.jsrastarepair.com",
   "telephone": "954-548-9364",
   "email": "jsrastarepair@gmail.com",
@@ -205,6 +207,7 @@
         justify-content: center;
         gap: 5px;
         padding: 0.75rem;
+        flex-wrap: wrap;
         position: sticky;
         top: 0;
         z-index: 999;
@@ -217,6 +220,7 @@
         font-weight: 600;
         font-size: 0.95rem;
         border-radius: 8px;
+        white-space: nowrap;
         transition: background 0.3s ease, color 0.3s ease;
     }
 
@@ -259,7 +263,7 @@
     .swiper-slide img {
         width: 100%;
         height: 100%;
-        object-fit: fill; /* Prevents stretching and cropping, but i want it to stretch */
+        object-fit: contain; /* Keeps repair photos proportional without distortion */
         display: block;
     }
 
@@ -299,7 +303,7 @@
     /* Dual Services Grid Layout */
     .services-brand-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
         gap: 30px;
         margin-top: 3rem;
     }
@@ -557,16 +561,7 @@
     }
     </style>
 
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XGQGC5SZR7">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-XGQGC5SZR7');
-</script>
 
 </head>
 <body>
@@ -582,16 +577,7 @@
        📞 Call Now: (954) 548-9364
     </a>        
 
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XGQGC5SZR7">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-XGQGC5SZR7');
-</script>
 
 
     
@@ -690,10 +676,40 @@
         </div>
     </main>
 
+
+    <!-- SEO Service and Location Links -->
+    <section class="rasta-repair-section" id="service-areas">
+        <h2 class="section-title">Appliance Repair Services & Areas We Serve</h2>
+        <p style="max-width:850px;margin:0 auto 1.5rem;text-align:center;line-height:1.7;">
+            J's Rasta Repair provides in-home appliance diagnostics and repair throughout Broward County.
+            Explore our appliance services and local service-area information below.
+        </p>
+        <div class="services-brand-grid" style="margin-top:1.5rem;">
+            <div class="rasta-repair-box">
+                <h3>Appliance Repair Services</h3>
+                <ul>
+                    <li><a href="/refrigerator-ice-maker-repair.html">Refrigerator & Ice Maker Repair</a></li>
+                    <li><a href="/washer-dryer-repair.html">Washer & Dryer Repair</a></li>
+                    <li><a href="/oven-stove-repair.html">Oven & Stove Repair</a></li>
+                    <li><a href="/dishwasher-repair.html">Dishwasher Repair</a></li>
+                    <li><a href="/microwave-repair.html">Microwave Repair</a></li>
+                </ul>
+            </div>
+            <div class="rasta-repair-box">
+                <h3>Local Service Areas</h3>
+                <ul>
+                    <li><a href="/appliance-repair-fort-lauderdale.html">Appliance Repair in Fort Lauderdale</a></li>
+                    <li><a href="/appliance-repair-hollywood.html">Appliance Repair in Hollywood</a></li>
+                    <li><a href="/appliance-repair-broward-county.html">Appliance Repair Across Broward County</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <!-- Booking Form Section -->
     <section class="rasta-repair-section" id="rasta-booking">
         <div id="applianceBookingSection">
-            <h2>Book A Repair</h2>
+            <h2>Book A Repair</h2>\n            <p style="text-align:center;line-height:1.6;margin:-1rem 0 1.5rem;">The diagnostic fee is $100 and covers the service visit and troubleshooting. It is applied toward the repair when you proceed.</p>
             <form action="https://formspree.io/f/xldnkllv" method="POST" id="applianceBookingForm">
                 <input type="hidden" name="_subject" value="New Appliance Repair Booking">
                 <input type="text" name="name" placeholder="Your Name" required />
