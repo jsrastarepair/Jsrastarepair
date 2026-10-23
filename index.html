@@ -509,6 +509,43 @@
         text-align: center;
     }
 
+    /* Appliance service descriptions */
+    .appliance-detail-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+        gap: 22px;
+        margin: 2rem auto 0;
+    }
+    .appliance-detail-card {
+        background: #fff;
+        border-radius: var(--border-radius);
+        padding: 1.6rem;
+        box-shadow: var(--card-shadow);
+        border: 1px solid #e2e8f0;
+        border-top: 4px solid var(--primary-color);
+        box-sizing: border-box;
+    }
+    .appliance-detail-card h3 {
+        margin: 0 0 0.8rem;
+        color: #0f172a;
+        font-size: 1.25rem;
+    }
+    .appliance-detail-card p {
+        line-height: 1.65;
+        margin: 0 0 0.85rem;
+    }
+    .appliance-detail-card p:last-child {
+        margin-bottom: 0;
+    }
+    .appliance-detail-card .repair-approach {
+        color: #475569;
+        font-size: 0.95rem;
+        background: #f8fafc;
+        border-left: 3px solid var(--secondary-color);
+        padding: 0.8rem;
+        border-radius: 6px;
+    }
+
     /* Contact Details Card */
     .contact-box {
         max-width: 550px; 
@@ -705,6 +742,69 @@
                     <li><a href="/appliance-repair-pompano-beach.html">Appliance Repair in Pompano Beach</a></li>
                 </ul>
             </div>
+        </div>
+    </section>
+
+    <!-- Appliance Repair Details -->
+    <section class="rasta-repair-section" id="appliance-repair-details">
+        <h2 class="section-title">Appliance Repair Services</h2>
+        <p style="max-width:850px;margin:0 auto 1.5rem;text-align:center;line-height:1.7;">
+            J's Rasta Repair provides residential and commercial appliance diagnostics and repair across South Florida.
+            We assess each reported problem, explain our findings, and recommend an appropriate repair before proceeding.
+            Our diagnostic fee is $100 and is applied toward the repair when you proceed.
+        </p>
+
+        <div class="appliance-detail-grid">
+            <article class="appliance-detail-card">
+                <h3>Refrigerator Repair</h3>
+                <p>We service refrigerators with cooling concerns, water leaks, unusual noises, freezer temperature problems, and other operating issues.</p>
+                <p class="repair-approach"><strong>Our approach:</strong> We assess the refrigerator's performance, inspect relevant systems, and identify the likely source of the problem before recommending a repair.</p>
+            </article>
+            <article class="appliance-detail-card">
+                <h3>Washer Repair</h3>
+                <p>We diagnose washing machines that will not start, drain, or spin correctly, as well as units with leaks, excessive vibration, or unusual noises.</p>
+                <p class="repair-approach"><strong>Our approach:</strong> We review the symptoms, evaluate the washer's operation, and determine which components or systems may need attention.</p>
+            </article>
+            <article class="appliance-detail-card">
+                <h3>Dryer Repair</h3>
+                <p>We service dryers with heating problems, drums that do not turn, long drying times, unusual noises, or other operating concerns.</p>
+                <p class="repair-approach"><strong>Our approach:</strong> We inspect the unit's operation and relevant systems, then recommend a repair based on the diagnosis.</p>
+            </article>
+            <article class="appliance-detail-card">
+                <h3>Oven and Stove Repair</h3>
+                <p>We address oven and stove problems such as inconsistent heating, burners that do not operate properly, ignition concerns, and control issues.</p>
+                <p class="repair-approach"><strong>Our approach:</strong> We evaluate the appliance and its operating systems to determine the likely cause and appropriate next steps.</p>
+            </article>
+            <article class="appliance-detail-card">
+                <h3>Dishwasher Repair</h3>
+                <p>We diagnose dishwashers that do not drain, leak, clean effectively, start, or complete their cycles as expected.</p>
+                <p class="repair-approach"><strong>Our approach:</strong> We assess the cycle and related operating components, then explain the repair options supported by our findings.</p>
+            </article>
+            <article class="appliance-detail-card">
+                <h3>Ice Maker Repair</h3>
+                <p>We service ice makers with low or no ice production, dispensing problems, leaks, unusual noises, or inconsistent operation.</p>
+                <p class="repair-approach"><strong>Our approach:</strong> We evaluate the ice maker and related systems to help identify the source of the issue and determine the appropriate repair.</p>
+            </article>
+            <article class="appliance-detail-card">
+                <h3>Microwave Repair</h3>
+                <p>We assess microwaves that do not heat properly, will not start, have unresponsive controls, or show other operating problems.</p>
+                <p class="repair-approach"><strong>Our approach:</strong> We use appropriate diagnostic procedures and safety precautions to assess the reported fault and determine whether repair is suitable.</p>
+            </article>
+            <article class="appliance-detail-card">
+                <h3>Garbage Disposal Service</h3>
+                <p>We assess disposals that will not operate, make unusual noises, hum without functioning, or show signs of leaking.</p>
+                <p class="repair-approach"><strong>Our approach:</strong> We inspect the unit and relevant connections, evaluate the issue, and recommend repair or replacement as appropriate.</p>
+            </article>
+            <article class="appliance-detail-card">
+                <h3>Range Hood Repair</h3>
+                <p>We assess range hood concerns involving ventilation performance, fan operation, lighting, and controls.</p>
+                <p class="repair-approach"><strong>Our approach:</strong> We evaluate the reported symptoms and inspect relevant operating components before recommending the next step.</p>
+            </article>
+            <article class="appliance-detail-card">
+                <h3>HVAC and Heat Pump Service</h3>
+                <p>We provide HVAC-related service for applicable cooling and heat-pump operating concerns, subject to the type of system and repair needed.</p>
+                <p class="repair-approach"><strong>Our approach:</strong> We assess system performance and relevant components, explain our findings, and outline the recommended service.</p>
+            </article>
         </div>
     </section>
 
